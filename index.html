@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu + Carrousel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+<header class="header-title">
+  <h1>Racines et Métamorphose</h1>
+  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
+</header>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo" />
+  </div>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" class="active">Accueil</a></li>
+    <li><a href="#">Ligne du temps</a></li>
+    <li><a href="#">Vie Quotidienne​</a></li>
+    <li><a href="#">Témoignages​</a></li>
+    <li><a href="#">Contributions économiques, politiques et sociales​​</a></li>
+    
+    
+  </ul>
+</nav>
+
+<!-- Carrousel -->
+<section class="main-carousel">
+    <!-- Carousel principal -->
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/slide1.png" alt="Image 1">
+          <div class="slide-content">
+            <h2>Ligne du temps</h2>
+            <p>Nous vous accompagnons dans tous vos projets.</p>
+            <button>En savoir plus</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide2.png" alt="Image 2">
+          <div class="slide-content">
+            <h2>Vie Quotidienne​</h2>
+            <p>Découvrez une gamme complète adaptée à vos besoins.</p>
+            <button>Découvrir</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide3.png" alt="Image 3">
+          <div class="slide-content">
+            <h2>Témoignages</h2>
+            <p>La satisfaction client est notre priorité.</p>
+            <button>Contactez-nous</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="images/slide3.png" alt="Image 3">
+            <div class="slide-content">
+              <h2>Contributions économiques, politiques et sociales​​</h2>
+              <p>La satisfaction client est notre priorité.</p>
+              <button>Contactez-nous</button>
+            </div>
+          </div>
+      </div>
+  
+      <!-- Flèches -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  
+    <!-- Miniatures en dessous -->
+    <div class="swiper thumbs-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/slide1.png" alt="Miniature 1"></div>
+        <div class="swiper-slide"><img src="images/slide2.png" alt="Miniature 2"></div>
+        <div class="swiper-slide"><img src="images/slide3.png" alt="Miniature 3"></div>
+        <div class="swiper-slide"><img src="images/slide3.png" alt="Miniature 4"></div>
+      </div>
+    </div>
+  </section>
+  <section class="presentation">
+    <div class="container">
+      <h2>Petit descriptif du but/histoire de l'expo​</h2>
+      <p>
+        Cette exposition itinérante est un projet de la MIRS 
+        visant à mettre en valeur l'histoire des personnes immigrantes 
+        dans la Rive-Sud de Montréal entre le 20e et 21e siècle.  
+        En faisant voyager l'exposition dans les différentes villes de 
+        l'agglomération de Longueuil, nous espérons renforcer les liens 
+        entre les communautés et promouvoir la compréhension mutuelle.​
+      </p>
+      <h2>Remerciements:​</h2>
+      <p>
+        ...........................................​
+        .............................................
+        ..............................................
+        ...............................................
+      </p>
+    </div>
+  </section>
+  
+  <section class="dates-avenir">
+  <div class="container">
+    <h2>Dates à venir</h2>
+    <ul>
+      <li class="fade-in">
+        <span class="icon">📅</span>
+        <div class="event-info">
+          <strong>1er mai 2025 :</strong> Lancement de notre nouvelle plateforme en ligne<br>
+          <span class="details">📍 Montréal | 🕒 10h00</span>
+        </div>
+      </li>
+      <li class="fade-in">
+        <span class="icon">📅</span>
+        <div class="event-info">
+          <strong>15 juin 2025 :</strong> Atelier de formation pour nos partenaires<br>
+          <span class="details">📍 Québec | 🕒 14h00</span>
+        </div>
+      </li>
+      <li class="fade-in">
+        <span class="icon">📅</span>
+        <div class="event-info">
+          <strong>30 août 2025 :</strong> Journée portes ouvertes<br>
+          <span class="details">📍 Laval | 🕒 9h30</span>
+        </div>
+      </li>
+      <li class="fade-in">
+        <span class="icon">📅</span>
+        <div class="event-info">
+          <strong>12 septembre 2025 :</strong> Webinaire gratuit sur la cybersécurité<br>
+          <span class="details">📍 En ligne | 🕒 18h00</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<footer class="footer">
+    <div class="container">
+      <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
+      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelector('.footer p').innerHTML = `© ${year} Maison Internationale de la Rive-Sud. Tous droits réservés.`;
+    });
+  </script>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // ↳ Dès qu'on a défilé 300px
+        backToTopButton.classList.add('show', 'animate');
+      } else {
+        backToTopButton.classList.remove('show', 'animate');
+      }
+    });
+  
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="Swiper.js"></script>
+</body>
+</html>
