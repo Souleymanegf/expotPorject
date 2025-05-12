@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des entreprises à Longueuil</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Style général de la carte */
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+
+        /* Style de la légende */
+        .legend {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            font-size: 14px;
+        }
+
+        .legend div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        /* Responsive : Adapter la hauteur de la carte */
+        @media (max-width: 768px) {
+            #map {
+                height: 400px; /* Réduit la hauteur sur tablette */
+            }
+
+            .legend {
+                bottom: 10px;
+                left: 10px;
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        /* Sur mobile, la légende passe en haut à droite */
+        @media (max-width: 480px) {
+            .legend {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                left: auto;
+                bottom: auto;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center">Entreprises immigrantes de l'agglomération de Longueuil</h2>
+    <div id="map"></div>
+
+    <div class="legend" id="legend">
+        <strong>Légende :</strong><br>
+        <div><span class="legend-color" style="background-color: black;"></span> Beauté</div>
+        <div><span class="legend-color" style="background-color: green;"></span> Nourriture</div>
+        <div><span class="legend-color" style="background-color: orange;"></span> Autre</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([45.5234, -73.5217], 12); // Coordonnées générales de Longueuil
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var locations = [
+            { name: "Épicerie Africaine de la Rive Sud", address: "265 Boulevard Sainte-Foy, Longueuil, QC J4J 1X1", lat: 45.5312, lon: -73.5208, color: "green" },
+            { name: "Salon d’esthétique Harshi’s", address: "3025 Ch. de Chambly, Longueuil, QC J4L 1N3", lat: 45.5269, lon: -73.5048, color: "black" },
+            { name: "Alma Latina Marché", address: "2114 Ch. de Chambly, Longueuil, QC J4J 3Y7", lat: 45.5345, lon: -73.5082, color: "green" },
+            { name: "Salon Black Beauty", address: "5240 Montée Saint-Hubert, Saint-Hubert, QC J3Y 1V7", lat: 45.4985, lon: -73.4235, color: "black" },
+            { name: "Cake Bakery Bro Tequeños & Empanadas", address: "3220 Rue Saint-Hubert, Saint-Hubert, QC J3Y 8Y5", lat: 45.5001, lon: -73.4005, color: "green"},
+            { name: "Angelo P.C. Chen", address: "5740 Rue Arthur, Brossard, QC J4Z 1E2", lat: 45.4798, lon: -73.4675, color: "orange"}           
+        ];
+
+        function addMarker(location) {
+            var customIcon = L.divIcon({
+                className: 'custom-icon',
+                html: `<div style="background-color: ${location.color}; 
+                        border-radius: 50%; width: 30px; height: 30px; 
+                        text-align: center; line-height: 30px; color: white; 
+                        font-weight: bold;">${location.name[0]}</div>`, 
+                iconSize: [30, 30],
+                iconAnchor: [15, 15]
+            });
+
+            var marker = L.marker([location.lat, location.lon], { icon: customIcon }).addTo(map);
+
+            var googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.name + ', ' + location.address)}`;
+
+            marker.bindPopup(`
+                <b>${location.name}</b><br>
+                Adresse: ${location.address}<br>
+                <b>Coordonnées:</b> ${location.lat}, ${location.lon}<br>
+                <a href="${googleMapsLink}" target="_blank">Ouvrir dans Google Maps</a>
+            `);
+        }
+
+        // Ajouter les marqueurs
+        locations.forEach(addMarker);
+    </script>
+</body>
+</html>
