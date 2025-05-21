@@ -1,0 +1,44 @@
+.accordion-container {
+    margin: 20px 0;
+  }
+  
+  .accordion-btn {
+    background-color: #e8eaf6;
+    color: #1a237e;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .accordion-btn:hover {
+    background-color: #c5cae9;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-left: 3px solid #3f51b5;
+  }
+  
+  .accordion-item + .accordion-item {
+    margin-top: 10px;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotation quand actif */
+  .accordion-btn.active .arrow {
+    transform: rotate(90deg);
+  }
+  

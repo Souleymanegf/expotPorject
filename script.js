@@ -29,22 +29,28 @@ function showSlide(index) {
   });
 }
 
-// Slide suivant
-function nextSlide() {
-  currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-  showSlide(currentSlideIndex);
-}
 
-// Fonction appelée sur clic miniature
-function currentSlide(index) {
-  currentSlideIndex = index;
-  showSlide(index);
-}
 
-// Défilement automatique toutes les 5 secondes
-setInterval(nextSlide, 5000);
 
-// Initialiser
+
+
+
+const swiper = new Swiper('.main-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  effect: 'slide',
+});
 showSlide(currentSlideIndex);
 // Animation fade-in au scroll
 const fadeElements = document.querySelectorAll('.fade-in');
@@ -60,3 +66,46 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
+
+(function () {
+  const content = document.getElementById("content");
+
+  // Fonction pour charger le contenu via AJAX
+  function chargerContenu(url) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        content.innerHTML = xhr.responseText;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        content.innerHTML = "<p>Le contenu n'a pas pu être chargé.</p>";
+      }
+    };
+
+    xhr.onerror = function () {
+      content.innerHTML = "<p>Une erreur est survenue.</p>";
+    };
+
+    xhr.send();
+  }
+
+  // Gérer les clics sur les liens
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      chargerContenu(href);
+      history.pushState({ page: href }, "", href); // gestion historique
+    });
+  });
+
+  // Support du bouton retour du navigateur
+  window.addEventListener("popstate", function (e) {
+    if (e.state && e.state.page) {
+      chargerContenu(e.state.page);
+    }
+  });
+})();
+

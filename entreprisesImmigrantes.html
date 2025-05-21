@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu + Carrousel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+<header class="header-title">
+  <h1>Agglomération de Longueuil, je me souviens</h1>
+  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
+</header>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo" />
+  </div>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="lignedutemps.html">Ligne du temps</a></li>
+    <li><a href="profileParVille.html">Immigration par ville​</a></li>
+    <li><a href="histoireIci.html">Histoires d'Ici</a></li> 
+    <li><a href="entreprisesImmigrantes.html" class="active">Dans l'Agglo​</a></li>
+    
+    
+  </ul>
+</nav>
+
+<!-- Carrousel -->
+<section class="main-carousel">
+  <h2 style="text-align: center">Dans l'Agglo</h2>
+    <div id="map"></div>
+
+    <div class="legend" id="legend">
+        <strong>Légende :</strong><br>
+        <div><span class="legend-color" style="background-color: black;"></span> Beauté</div>
+        <div><span class="legend-color" style="background-color: green;"></span> Nourriture</div>
+        <div><span class="legend-color" style="background-color: orange;"></span> Autre</div>
+    </div>
+</section>
+
+    <!-- Miniatures en dessous -->
+    
+ 
+  <section class="presentation">
+    <div class="container">
+      <h2>Petit descriptif du but/histoire de l'expo​</h2>
+      <p>
+        Cette exposition itinérante est un projet de la MIRS 
+        visant à mettre en valeur l'histoire des personnes immigrantes 
+        dans la Rive-Sud de Montréal entre le 20e et 21e siècle.  
+        En faisant voyager l'exposition dans les différentes villes de 
+        l'agglomération de Longueuil, nous espérons renforcer les liens 
+        entre les communautés et promouvoir la compréhension mutuelle.​
+      </p>
+      <h2>Remerciements:​</h2>
+      <p>
+        ...........................................​
+        .............................................
+        ..............................................
+        ...............................................
+      </p>
+    </div>
+  </section>
+  
+  
+
+<footer class="footer">
+    <div class="container">
+      <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
+      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelector('.footer p').innerHTML = `© ${year} Maison Internationale de la Rive-Sud. Tous droits réservés.`;
+    });
+  </script>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // ↳ Dès qu'on a défilé 300px
+        backToTopButton.classList.add('show', 'animate');
+      } else {
+        backToTopButton.classList.remove('show', 'animate');
+      }
+    });
+  
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+      var map = L.map('map').setView([45.5234, -73.5217], 12); // Coordonnées générales de Longueuil
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      var locations = [
+          { name: "Épicerie Africaine de la Rive Sud", address: "265 Boulevard Sainte-Foy, Longueuil, QC J4J 1X1", lat: 45.5312, lon: -73.5208, color: "green" },
+          { name: "Salon d’esthétique Harshi’s", address: "3025 Ch. de Chambly, Longueuil, QC J4L 1N3", lat: 45.5269, lon: -73.5048, color: "black" },
+          { name: "Alma Latina Marché", address: "2114 Ch. de Chambly, Longueuil, QC J4J 3Y7", lat: 45.5345, lon: -73.5082, color: "green" },
+          { name: "Salon Black Beauty", address: "5240 Montée Saint-Hubert, Saint-Hubert, QC J3Y 1V7", lat: 45.4985, lon: -73.4235, color: "black" },
+          { name: "Cake Bakery Bro Tequeños & Empanadas", address: "3220 Rue Saint-Hubert, Saint-Hubert, QC J3Y 8Y5", lat: 45.5001, lon: -73.4005, color: "green"},
+          { name: "Angelo P.C. Chen", address: "5740 Rue Arthur, Brossard, QC J4Z 1E2", lat: 45.4798, lon: -73.4675, color: "orange"}           
+      ];
+
+      function addMarker(location) {
+          var customIcon = L.divIcon({
+              className: 'custom-icon',
+              html: `<div style="background-color: ${location.color}; 
+                      border-radius: 50%; width: 30px; height: 30px; 
+                      text-align: center; line-height: 30px; color: white; 
+                      font-weight: bold;">${location.name[0]}</div>`, 
+              iconSize: [30, 30],
+              iconAnchor: [15, 15]
+          });
+
+          var marker = L.marker([location.lat, location.lon], { icon: customIcon }).addTo(map);
+
+          var googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.name + ', ' + location.address)}`;
+
+          marker.bindPopup(`
+              <b>${location.name}</b><br>
+              Adresse: ${location.address}<br>
+              <b>Coordonnées:</b> ${location.lat}, ${location.lon}<br>
+              <a href="${googleMapsLink}" target="_blank">Ouvrir dans Google Maps</a>
+          `);
+      }
+
+      // Ajouter les marqueurs
+      locations.forEach(addMarker);
+  </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="Swiper.js"></script>
+</body>
+</html>

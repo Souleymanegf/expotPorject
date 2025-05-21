@@ -1,0 +1,185 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Police de caractères et style de base */
+
+
+/* En-tête */
+.header2 {
+  background: #0077c2;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.header2 h1 {
+  
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+ 
+}
+
+.header2 p {
+  font-size: 20px;
+
+
+}
+
+/* Icônes en défilement */
+.scrolling-icons {
+  position: fixed;
+  top: 50%;
+  left: -100%;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  opacity: 0.5;
+  animation: scrollIcons 20s linear infinite;
+}
+
+.scrolling-icons i {
+  font-size: 40px;
+  color: #004b7d;
+  margin-right: 40px;
+}
+
+/* Animation des icônes */
+@keyframes scrollIcons {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Section avec image et contenu */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section img {
+  width: 45%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section .content {
+  width: 50%;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #004b7d;
+  margin-bottom: 20px;
+}
+
+header, section p {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-indent: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .section .content {
+    width: 100%;
+  }
+
+  .header2 h1 {
+    font-size: 32px;
+  }
+
+  .header2 p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+.slick-slide img{
+    width: 100%;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.copy{
+    padding-top: 250px;
+}
+

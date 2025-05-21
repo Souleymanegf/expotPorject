@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histoire de l'immigration à Longueuil</title>
+ 
+  <link rel="stylesheet" href="styleLignedutemps.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Lien vers FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+    <header class="header-title">
+        <h1>Agglomération de Longueuil, je me souviens</h1>
+        <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
+      </header>
+      
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="lignedutemps.html" class="active">Ligne du temps</a></li>
+          <li><a href="profileParVille.html">Immigration par ville​</a></li>
+          <li><a href="histoireIci.html">Histoires d'Ici</a></li> 
+          <li><a href="entreprisesImmigrantes.html">Dans l'Agglo​</a></li>
+          
+          
+        </ul>
+      </nav>
+  <header class="header2">
+    <h1>Histoire de l’immigration à Longueuil</h1>
+    <p>L’évolution de l’immigration dans l’agglomération de Longueuil 
+        s’inscrit dans un contexte plus large de transformations démographiques 
+        observées à Montréal et au Canada. La manière dont les données statistiques 
+        ont été collectés et regroupées au fil des décennies influence la compréhension 
+        des dynamiques migratoires locales. Pendant longtemps, 
+        les statistiques démographiques de Longueuil étaient souvent regroupées avec celles de 
+        Montréal au sein de la Région Métropolitaine de Montréal, rendant l’analyse spécifique de 
+        son immigration plus complexe. C’est pourquoi cette section examine les tendances migratoires 
+        non seulement à Longueuil, mais aussi à Montréal, au Québec et à l’échelle du Canada, afin d’offrir un contexte plus approfondi à votre lecture.
+    </p>
+    
+  
+        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+            <h1 style="text-align: center; font-family: 'Bad Script'; font-weight: bold;">Immiggration par communauté:</h1>
+          
+            <section class="customer-logos slider">
+                <div class="slide img-fluid">Immigration Française</div>
+                <div class="slide img-fluid">Immigration Haitienne</div>
+                <div class="slide img-fluid">Immigration Maghrébine</div>
+                <div class="slide img-fluid">Immiggration Camérounaise</div>
+                <div class="slide img-fluid">Immigration chinoise</div>
+               
+            </section>
+          </div>
+    
+        
+      
+      
+  </header>
+
+  
+  <main>
+    <section class="section">
+      <div class="content">
+        <h2>Le Contexte Historique</h2>
+        <p>
+          L’immigration à Longueuil a suivi une trajectoire marquée par des événements mondiaux et une évolution démographique constante. Depuis les premières vagues de peuplement, la ville a vu ses habitants se diversifier au fil des siècles, au rythme des changements politiques et économiques, aussi bien au Québec qu’au Canada.
+        </p>
+        <p>
+          Le processus de collecte des données démographiques a souvent brouillé les pistes, car Longueuil était souvent incluse dans les statistiques générales de Montréal. Ce n'est que récemment que la ville a vu émerger une identité propre, marquée par une présence croissante de communautés culturelles diversifiées.
+        </p>
+      </div>
+      <img src="images/histoireLongueil.jpg" alt="Photo historique de Longueuil">
+    </section>
+
+    <section class="section">
+      <div class="content">
+        <h2>L’immigration Récente</h2>
+        <p>
+          Depuis les années 90, l'immigration à Longueuil est devenue un moteur essentiel de la croissance de la population. Ce phénomène s'est intensifié dans les années 2000, alors que le Québec a vu un solde migratoire positif qui a contribué à transformer profondément la structure démographique de la région.
+        </p>
+        <p>
+          En 2023, Longueuil est une ville riche de multiples cultures, avec des quartiers vibrants comme Saint-Hubert et Greenfield Park, où l’immigration joue un rôle clé dans la dynamique sociale et économique. Ce flux migratoire reflète non seulement l’attractivité de la ville mais aussi la quête de nouvelles opportunités pour ses nouveaux habitants.
+        </p>
+      </div>
+      <img src="images/immigration2.jpg" alt="Image d'immigrants à Longueuil">
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
+      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelector('.footer p').innerHTML = `© ${year} Maison Internationale de la Rive-Sud. Tous droits réservés.`;
+    });
+  </script>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // ↳ Dès qu'on a défilé 300px
+        backToTopButton.classList.add('show', 'animate');
+      } else {
+        backToTopButton.classList.remove('show', 'animate');
+      }
+    });
+  
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="Swiper.js"></script>
+  <script>
+    // Animation au scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+  </script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="Swiper.js"></script>
+
+</body>
+</html>
