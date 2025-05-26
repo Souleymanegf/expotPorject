@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agglomération de Longueuil, je me souviens</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+<header class="header-title">
+  <h1>Agglomération de Longueuil, je me souviens</h1>
+  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
+</header>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo" />
+  </div>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
+    <li><a href="/ligneDuTemps">Ligne du temps</a></li>
+    <li><a href="/echosDuPasse" class="active">Échos du passé</a></li>
+    <li><a href="/profileParVille">Immigration par ville​</a></li>
+    <li><a href="/histoireIci">Histoires d'Ici</a></li> 
+    <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
+
+    
+    
+  </ul>
+</nav>
+
+<!-- Carrousel -->
+
+<footer class="footer">
+    <div class="container">
+      <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
+      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelector('.footer p').innerHTML = `© ${year} Maison Internationale de la Rive-Sud. Tous droits réservés.`;
+    });
+  </script>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // ↳ Dès qu'on a défilé 300px
+        backToTopButton.classList.add('show', 'animate');
+      } else {
+        backToTopButton.classList.remove('show', 'animate');
+      }
+    });
+  
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="Swiper.js"></script>
+</body>
+</html>

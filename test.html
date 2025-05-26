@@ -1,213 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
-  <title>Profil par Ville – Agglomération de Longueuil</title>
-  <style>
-    
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-    }
-
-    .accordion-btn {
-      background-color: #e8eaf6;
-      color: #1a237e;
-      cursor: pointer;
-      padding: 15px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid #c5cae9;
-    }
-
-    .arrow {
-      transition: transform 0.3s ease;
-      font-size: 18px;
-    }
-
-    .accordion-btn.active .arrow {
-      transform: rotate(90deg);
-    }
-
-    .accordion-content {
-      padding: 0 15px 15px 40px;
-      display: none;
-      background-color: #fff;
-      border-bottom: 1px solid #c5cae9;
-    }
-
-    
-  </style>
+  <meta charset="UTF-8">
+  <title>Galerie Historique</title>
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <header class="header-title">
-        <h1>Agglomération de Longueuil, je me souviens</h1>
-        <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-      </header>
-      
-      <nav class="navbar">
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </div>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html" class="active" href="#" >Accueil</a></li>
-          <li><a href="lignedutemps.html">Ligne du temps</a></li>
-          <li><a href="#">Immigration par ville​</a></li>
-          <li><a href="#">Histoires d'Ici</a></li> 
-          <li><a href="entreprisesImmigrantes.html">Dans l'Agglo​</a></li>
-          
-          
-        </ul>
-      </nav> 
-  <header>
-    <h1>Profil par Ville – Agglomération de Longueuil</h1>
-  </header>
-
-  <div class="container">
-
-    <!-- Ville 1 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Longueuil et Vieux-Longueuil
-    </button>
-    <div class="accordion-content">
-      <p>Longueuil est une ville où de nombreux immigrants choisissent de s’installer. Selon le recensement de 2021, c’est dans Longueuil et particulièrement dans le Vieux-Longueuil que l’on retrouve la plus forte proportion d’immigrants récents au sein de l’agglomération. Le Vieux-Longueuil accueille ainsi 22,8 % de ces nouveaux arrivants, tandis que Longueuil dans son ensemble en compte 19,0 %.</p>
-      <p>Les immigrants qui s’y établissent viennent principalement d’Afrique (38,7 % à Vieux-Longueuil, 34,1 % à Longueuil), suivis de l’Europe (env. 20 %) et de l’Asie (15,7 % à Vieux-Longueuil, 18,6 % à Longueuil).</p>
-    </div>
-
-    <!-- Ville 2 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Hubert
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Hubert se distingue par sa grande diversité ethnique. Les principales communautés immigrantes viennent d’Haïti, du Maroc et de France. En 2021, 21,6 % de la population (19 710 personnes) est issue de l’immigration.</p>
-      <p>Les origines principales sont : Afrique (30 %), Asie (21,5 %), Europe (19,8 %). La croissance entre 2016 et 2021 est de 43,1 % — la plus forte de l’agglomération.</p>
-    </div>
-
-    <!-- Ville 3 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Greenfield Park
-    </button>
-    <div class="accordion-content">
-      <p>Greenfield Park compte 25,4 % d’immigrants en 2021 et la plus forte proportion de réfugiés de l’agglomération. Les pays d’origine : Algérie, Afghanistan, Chine, Colombie, Roumanie.</p>
-      <p>Les régions : Europe (29,8 %), Asie (25 %), Afrique (22,2 %). Cette diversité enrichit fortement son caractère culturel.</p>
-    </div>
-
-    <!-- Ville 4 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Brossard
-    </button>
-    <div class="accordion-content">
-      <p>Ville historiquement marquée par l’immigration, Brossard a en 2021 la plus grande proportion d’immigrants : 40,8 %. Cependant, elle attire peu de nouveaux immigrants (14 %).</p>
-      <p>Origines : Asie (50,1 %), Afrique (18,6 %), Europe (15,4 %), Amérique latine (10,1 %). Pays notables : Chine, Vietnam, Inde, Maroc, France, Colombie, etc.</p>
-    </div>
-
-    <!-- Ville 5 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Lambert
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Lambert accueille 16,2 % de la population immigrante de l’agglomération et 17,8 % de l’immigration récente. Notable : 31,4 % des immigrants sont des aînés.</p>
-      <p>Origines : Europe (35,6 %), Asie (21,6 %), Amérique latine (17,4 %). Pays : France, Roumanie, Algérie, Chine, Iran, Colombie.</p>
-    </div>
-
-    <!-- Ville 6 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Bruno
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Bruno a une population immigrante modeste (10,3 %) avec peu d’immigrants récents (14,4 %), mais une forte proportion d’immigration économique.</p>
-      <p>Origines : Europe (50,6 %), Asie (14,4 %), Amérique latine (14,2 %). Sa tendance européenne est marquée comparée aux autres villes.</p>
-    </div>
-
-    <!-- Ville 7 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Boucherville
-    </button>
-    <div class="accordion-content">
-      <p>Avec seulement 9,4 % d’immigrants en 2021, Boucherville est la ville la moins immigrée de l’agglomération. Pourtant, 15,1 % des immigrants sont récents.</p>
-      <p>Origines : Europe (34,4 %), Afrique (19,9 %), Amérique latine (19,3 %), Asie (17,7 %). Pays : France, Colombie, Chine, Maroc, Haïti, Vietnam.</p>
-    </div>
-
+  <h1 class="titre">Galerie Historique</h1>
+  <div class="gallery">
+    <img src="images/Galerie photos/Img1.jpg" alt="">
+    <img src="images/Galerie photos/Img2.jpg" alt="">
+    <img src="images/Galerie photos/Img3.jpg" alt="">
+    <img src="images/Galerie photos/Img4.jpg" alt="">
+    <img src="images/Galerie photos/Img5.jpg" alt="">
+    <img src="images/Galerie photos/Img6.jpg" alt="">
+    <img src="images/Galerie photos/Img7.jpg" alt="">
+    <img src="images/Galerie photos/Img8.jpg" alt="">
+    <img src="images/Galerie photos/Img9.jpg" alt="">
+    <img src="images/Galerie photos/Img10.jpg" alt="">
+    <img src="images/Galerie photos/Img11.jpg" alt="">
+    <img src="images/Galerie photos/Img12.jpg" alt="">
+    <img src="images/Galerie photos/Img13.jpg" alt="">
+    <img src="images/Galerie photos/Img14.jpg" alt="">
+    <img src="images/Galerie photos/Img15.jpg" alt="">
+    <!-- Ajoute autant d’images que tu veux -->
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
-      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
-    </div>
-  </footer>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const year = new Date().getFullYear();
-      document.querySelector('.footer p').innerHTML = `© ${year} Maison Internationale de la Rive-Sud. Tous droits réservés.`;
-    });
-  </script>
-  <script>
-    const backToTopButton = document.getElementById('back-to-top');
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) { // ↳ Dès qu'on a défilé 300px
-        backToTopButton.classList.add('show', 'animate');
-      } else {
-        backToTopButton.classList.remove('show', 'animate');
-      }
-    });
-  
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
-   
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-<script src="Swiper.js"></script>
-
-  <script>
-    const buttons = document.querySelectorAll('.accordion-btn');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        btn.classList.toggle('active');
-
-        // Ferme les autres
-        buttons.forEach(b => {
-          if (b !== btn) {
-            b.classList.remove('active');
-            b.nextElementSibling.style.display = 'none';
-          }
-        });
-
-        content.style.display = btn.classList.contains('active') ? 'block' : 'none';
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
+<script>
+  const images = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let currentIndex = 0;
+
+// Ouvre la lightbox
+images.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = "block";
+    lightboxImg.src = img.src;
+    currentIndex = index;
+  });
+});
+
+// Ferme la lightbox
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = "none";
+});
+
+// Suivante
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  lightboxImg.src = images[currentIndex].src;
+});
+
+// Précédente
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  lightboxImg.src = images[currentIndex].src;
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    lightbox.style.display = "none";
+  }
+});
+
+</script>
 </html>
