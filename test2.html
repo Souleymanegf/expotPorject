@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fond animé varié</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .shape {
+      position: absolute;
+      opacity: 0.15;
+      z-index: 0;
+      animation: float linear infinite;
+    }
+
+    .circle {
+      border-radius: 50%;
+      background-color: #38bdf8;
+    }
+
+    .square {
+      background-color: #facc15;
+    }
+
+    .rectangle {
+      background-color: #a78bfa;
+    }
+
+    .semi-circle {
+      background-color: #34d399;
+      border-radius: 100px 100px 0 0;
+      transform: rotate(0deg);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-200px) translateX(50px) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cercles -->
+  <div class="shape circle" style="width: 80px; height: 80px; left: 5%; animation-duration: 26s;"></div>
+  <div class="shape circle" style="width: 50px; height: 50px; left: 35%; animation-duration: 18s;"></div>
+
+  <!-- Carrés -->
+  <div class="shape square" style="width: 60px; height: 60px; left: 20%; animation-duration: 30s;"></div>
+  <div class="shape square" style="width: 100px; height: 100px; left: 80%; animation-duration: 24s;"></div>
+
+  <!-- Rectangles -->
+  <div class="shape rectangle" style="width: 40px; height: 120px; left: 15%; animation-duration: 22s;"></div>
+  <div class="shape rectangle" style="width: 60px; height: 160px; left: 50%; animation-duration: 35s;"></div>
+
+  <!-- Demi-cercles -->
+  <div class="shape semi-circle" style="width: 100px; height: 50px; left: 70%; animation-duration: 28s;"></div>
+  <div class="shape semi-circle" style="width: 120px; height: 60px; left: 45%; animation-duration: 32s;"></div>
+
+</body>
+</html>

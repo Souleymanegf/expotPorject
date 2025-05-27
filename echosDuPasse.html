@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agglomération de Longueuil, je me souviens</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="echosDuPasse.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
@@ -36,7 +37,60 @@
   </ul>
 </nav>
 
-<!-- Carrousel -->
+<div class="gallery">
+  <img src="images/Galerie photos/Img1.jpg" alt="">
+  <img src="images/Galerie photos/Img2.jpg" alt="">
+  <img src="images/Galerie photos/Img3.jpg" alt="">
+  <img src="images/Galerie photos/Img4.jpg" alt="">
+  <img src="images/Galerie photos/Img5.jpg" alt="">
+  <img src="images/Galerie photos/Img6.jpg" alt="">
+  <img src="images/Galerie photos/Img7.jpg" alt="">
+  <img src="images/Galerie photos/Img8.jpg" alt="">
+  <img src="images/Galerie photos/Img9.jpg" alt="">
+  <img src="images/Galerie photos/Img10.jpg" alt="">
+  <img src="images/Galerie photos/Img11.jpg" alt="">
+  <img src="images/Galerie photos/Img12.jpg" alt="">
+  <img src="images/Galerie photos/Img13.jpg" alt="">
+  <img src="images/Galerie photos/Img14.jpg" alt="">
+  <img src="images/Galerie photos/Img15.jpg" alt="">
+  <img src="images/Galerie photos/Img16.jpg" alt="">
+  <img src="images/Galerie photos/Img17.jpg" alt="">
+  <img src="images/Galerie photos/Img18.jpg" alt="">
+  <img src="images/Galerie photos/Img19.jpg" alt="">
+  <img src="images/Galerie photos/Img20.jpg" alt="">
+  <img src="images/Galerie photos/Img21.jpg" alt="">
+  <img src="images/Galerie photos/Img22.jpg" alt="">
+  <img src="images/Galerie photos/Img23.jpg" alt="">
+  <img src="images/Galerie photos/Img24.jpg" alt="">
+  <img src="images/Galerie photos/Img25.jpg" alt="">
+  <img src="images/Galerie photos/Img26.jpg" alt="">
+  <img src="images/Galerie photos/Img27.jpg" alt="">
+  <img src="images/Galerie photos/Img28.jpg" alt="">
+  <img src="images/Galerie photos/Img29.jpg" alt="">
+  <img src="images/Galerie photos/Img30.jpg" alt="">
+  <img src="images/Galerie photos/Img31.jpg" alt="">
+  <img src="images/Galerie photos/img32.JPG" alt="">
+  <img src="images/Galerie photos/img33.JPG" alt="">
+  <img src="images/Galerie photos/img34.JPG" alt="">
+  <img src="images/Galerie photos/img35.JPG" alt="">
+  <img src="images/Galerie photos/img36.JPG" alt="">
+  <img src="images/Galerie photos/img37.JPG" alt="">
+  <img src="images/Galerie photos/img38.JPG" alt="">
+  <img src="images/Galerie photos/img39.JPG" alt="">
+  <img src="images/Galerie photos/img40.JPG" alt="">
+
+
+
+  <!-- Ajoute autant d’images que tu veux -->
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
 
 <footer class="footer">
     <div class="container">
@@ -69,7 +123,50 @@
       });
     });
   </script>
-    
+   <script>
+    const images = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  
+  let currentIndex = 0;
+  
+  // Ouvre la lightbox
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = "block";
+      lightboxImg.src = img.src;
+      currentIndex = index;
+    });
+  });
+  
+  // Ferme la lightbox
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = "none";
+  });
+  
+  // Suivante
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+  
+  // Précédente
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  });
+  
+  // Fermer avec Échap
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.style.display = "none";
+    }
+  });
+  
+  </script> 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
