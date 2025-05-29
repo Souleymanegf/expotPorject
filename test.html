@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Galerie Historique</title>
-  <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agglomération de Longueuil, Je Me Souviens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Barlow', sans-serif;
+      background-color: #f2f2f2;
+   
+    }
+
+    .remerciement {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+   .remerciement .column {
+      flex: 1 1 100%;
+      padding: 2rem;
+      min-width: 300px;
+      box-sizing: border-box;
+      
+    }
+
+    .remerciement .left-column {
+      background-color: #F2F0ED;
+    }
+
+   .remerciement .right-column {
+      background-color: white;
+      color: black;
+      font-family: 'Bad Script';
+     
+    }
+
+    .remerciement img.title-image {
+      max-width: 30%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .remerciement h1 {
+      margin-top: 0;
+      color: #965A7A;
+      font-family: 'Barlow';
+    }
+
+    .remerciement p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .remerciement .column {
+        flex: 1 1 100%;
+      }
+
+     .remerciement h3 {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-   
-  <h1 class="titre">Galerie Historique</h1>
-  <div class="gallery">
-    <img src="images/Galerie photos/Img1.jpg" alt="">
-    <img src="images/Galerie photos/Img2.jpg" alt="">
-    <img src="images/Galerie photos/Img3.jpg" alt="">
-    <img src="images/Galerie photos/Img4.jpg" alt="">
-    <img src="images/Galerie photos/Img5.jpg" alt="">
-    <img src="images/Galerie photos/Img6.jpg" alt="">
-    <img src="images/Galerie photos/Img7.jpg" alt="">
-    <img src="images/Galerie photos/Img8.jpg" alt="">
-    <img src="images/Galerie photos/Img9.jpg" alt="">
-    <img src="images/Galerie photos/Img10.jpg" alt="">
-    <img src="images/Galerie photos/Img11.jpg" alt="">
-    <img src="images/Galerie photos/Img12.jpg" alt="">
-    <img src="images/Galerie photos/Img13.jpg" alt="">
-    <img src="images/Galerie photos/Img14.jpg" alt="">
-    <img src="images/Galerie photos/Img15.jpg" alt="">
-    <!-- Ajoute autant d’images que tu veux -->
-  </div>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
-  </div>
-  <!-- Cercles -->
-  <div class="shape circle" style="width: 80px; height: 80px; left: 5%; animation-duration: 26s;"></div>
-  <div class="shape circle" style="width: 50px; height: 50px; left: 35%; animation-duration: 18s;"></div>
+  <section class="remerciement">
+    <div class="column left-column">
+      <!-- Remplace le chemin par le tien -->
+      <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Titre de l'exposition" class="title-image" />
+      <p>
+        Agglomération de Longueuil, Je Me Souviens est une exposition itinérante qui retrace l’histoire de l’immigration dans l’agglomération de Longueuil. À travers des témoignages, des artéfacts et des récits inspirants, elle met en valeur la richesse de la diversité ethnoculturelle locale. La communauté immigrante y occupe une place centrale, racontant son parcours, ses défis et ses contributions à la vie collective. La Maison Internationale de la Rive-Sud vous invite à découvrir un patrimoine vivant, façonné par des cultures et des histoires venues d’ailleurs.
+      </p>
+    </div>
+    <div class="column right-column">
+      <h1>Remerciements</h1>
+      <p>
+        La Maison internationale de la Rive-Sud tient à exprimer sa profonde gratitude à tous les contributeurs clés qui ont rendu ce projet possible. 
+      </p>
+        Un merci tout particulier à la Ville de Longueuil pour son soutien financier, sans lequel cette exposition n’aurait pu voir le jour. 
+      <p>
 
-  <!-- Carrés -->
-  <div class="shape square" style="width: 60px; height: 60px; left: 20%; animation-duration: 30s;"></div>
-  <div class="shape square" style="width: 100px; height: 100px; left: 80%; animation-duration: 24s;"></div>
+      </p>
+      Nous remercions également les étudiants du programme de maîtrise en muséologie de l’UQAM – Marie Pascal, Alice Perron-Savard, Jean-Jacques Fenolo, Sara Zeini Hassanvand, Mariana Jiménez et Ekaterina Yakovleff – ainsi que leurs professeurs Léa Le Calvé et Yves Bergeron, dont les recherches ont constitué les fondations de cette exposition. 
+      <p>
+        Enfin, un immense merci aux membres de la communauté de l’agglomération et nos collègues de la Maison Internationale de la Rive-Sud qui ont généreusement partagé leurs témoignages, artéfacts et archives. Votre précieuse collaboration a donné vie à cette exposition. 
 
-  <!-- Rectangles -->
-  <div class="shape rectangle" style="width: 40px; height: 120px; left: 15%; animation-duration: 22s;"></div>
-  <div class="shape rectangle" style="width: 60px; height: 160px; left: 50%; animation-duration: 35s;"></div>
+      </p>
+    </div>
+    
+  </section>
+  <footer style="background-color:white; padding:2rem 1rem; text-align:center;">
+    
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; align-items:center; margin-top:1rem;">
+      <img src="images/logo-ville-longueuil.jpg" alt="Ville de Longueuil" style="height:100px;">
+      <img src="images/LOGO_PartFinanciere_Quebec.jpg" alt="Partenaire financière" style="height:100px;">
+      <img src="images/Logo-MIRS.jpeg" alt="MIRS" style="height:100px;">
+      <!-- Ajoute d'autres logos ici -->
+    </div>
+  </footer>
 
-  <!-- Demi-cercles -->
-  <div class="shape semi-circle" style="width: 100px; height: 50px; left: 70%; animation-duration: 28s;"></div>
-  <div class="shape semi-circle" style="width: 120px; height: 60px; left: 45%; animation-duration: 32s;"></div>
-  <script src="script.js"></script>
 </body>
-<script>
-  const images = document.querySelectorAll('.gallery img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.querySelector('.close');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentIndex = 0;
-
-// Ouvre la lightbox
-images.forEach((img, index) => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
-    currentIndex = index;
-  });
-});
-
-// Ferme la lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = "none";
-});
-
-// Suivante
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-});
-
-// Précédente
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-});
-
-// Fermer avec Échap
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    lightbox.style.display = "none";
-  }
-});
-
-</script>
 </html>
