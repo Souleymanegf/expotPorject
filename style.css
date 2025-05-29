@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Barlow', sans-serif;
-    background-color: #f4f7f9;
+    background-color: #F2F0ED;
   }
   
   /* Header Title */
@@ -177,6 +177,7 @@
     border: none;
     cursor: pointer;
     z-index: 110;
+  
   }
   
   
@@ -399,7 +400,7 @@
     margin-top: 8px;
   }
   .footer {
-    background-color: #f4f7f9;
+    background-color: #F2F0ED;
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
@@ -413,10 +414,10 @@
     margin: 0 auto;
   } 
   #back-to-top {
-    margin-top: 10px;
-    padding: 12px 16px;
+    margin-top: 12px;
+    padding: 6px 12px;
     font-size: 20px;
-    background-color: #0077c2;
+    background-color: #965A7A;
     color: white;
     border: none;
     border-radius: 50%;
@@ -436,7 +437,8 @@
   }
   
   #back-to-top:hover {
-    background-color: #005fa3;
+    background-color: #F2F0ED;
+    color: #965A7A;
     transform: translateY(-4px) scale(1.1); /* Petit effet rebond */
   }
   
