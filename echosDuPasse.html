@@ -3,21 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
   <title>Agglomération de Longueuil, je me souviens</title>
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="echosDuPasse.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
-<header class="header-title">
-  <h1>Agglomération de Longueuil, je me souviens</h1>
-  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-</header>
-
-<nav class="navbar">
+<header class="dates-header">
+    <div class="dates-background">
+      <span class="date floating" style="--x: 10%; --y: 50%; --duration: 20s; color: #F2B123;">1900</span>
+      <span class="date floating" style="--x: 40%; --y: 60%; --duration: 25s; color: #F2B123">1950</span>
+      <span class="date floating" style="--x: 70%; --y: 30%; --duration: 18s; color: #487999;">1970</span>
+      <span class="date floating" style="--x: 20%; --y: 70%; --duration: 22s; color: #487999;">1980</span>
+      <span class="date floating" style="--x: 60%; --y: 60%; --duration: 30s; color: #F2797E;">1990</span>
+      <span class="date floating" style="--x: 80%; --y: 10%; --duration: 30s; color: #F2797E;">2000</span>
+      <span class="date floating" style="--x: 50%; --y: 10%; --duration: 30s; color: #62BAAB;">2010</span>
+      <span class="date floating" style="--x: 10%; --y: 10%; --duration: 30s; color: #62BAAB;">2020</span>
+      <span class="date floating" style="--x: 80%; --y: 80%; --duration: 30s; color: #BB7928;">Présent</span>
+      
+      
+    </div>
+    <div class="text-center">
+      <h1>Agglomération de Longueuil, Je Me Souviens</h1>
+      <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil</p>
+    </div>
+  </header>
+  <nav class="navbar">
   <div class="logo">
-    <img src="images/logo.png" alt="Logo" />
+    <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Logo" />
   </div>
   <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
     <span class="bar"></span>
@@ -25,17 +44,19 @@
     <span class="bar"></span>
   </button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
+    <li><a href="https://expojemesouviens.ca/" class="active">Accueil</a></li>
     <li><a href="/ligneDuTemps">Ligne du temps</a></li>
-    <li><a href="/echosDuPasse" class="active">Échos du passé</a></li>
+    <li><a href="/echosDuPasse">Échos du passé</a></li>
     <li><a href="/profileParVille">Immigration par ville​</a></li>
     <li><a href="/histoireIci">Histoires d'Ici</a></li> 
     <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
-
+    <li><a href="#">Bibliographie</a></li>
+    <li><a href="">Politique de confidentialité</a></li>
     
     
   </ul>
 </nav>
+
 
 <div class="gallery">
   <img src="images/Galerie photos/Img1.jpg" alt="">
