@@ -106,13 +106,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-header, section p {
+section p {
   font-size: 18px;
   line-height: 1.7;
   font-weight: 400;
-  margin-bottom: 20px;
+  
   text-align: justify;
-  text-indent: 30px;
+  
 }
 
 /* Responsive Design */
@@ -183,3 +183,47 @@ header, section p {
     padding-top: 250px;
 }
 
+
+    @keyframes arrowMove {
+      0%   { transform: translateX(0); }
+      50%  { transform: translateX(2px); }
+      
+    }
+
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1); }
+      
+    }
+
+    /* Responsive styles */
+    @media (max-width: 480px) {
+      .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+
+      .cta-button .arrow {
+        font-size: 14px;
+        margin-left: 8px;
+      }
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F2F0ED;
+      color: #965A7A;
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 100%;
+      animation: pulse 2.5s infinite ease-in-out;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    

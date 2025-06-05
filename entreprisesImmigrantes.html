@@ -3,21 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agglomération de Longueuil, je me souviens</title>
+  <title>Agglomération de Longueuil, Je me souviens</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #F2F0ED;
+  }
+  .section {
+      max-width: 800px;
+      margin: 5vh auto;
+      padding: 5vw;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .legend {
+      font-size: 2vh;
+     
+    }
+    
+    .Legende1 div {
+      
+      margin: 1rem;
+     
+    }
+
+
+    .section h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 6vw;
+      }
+
+      .section h1 {
+        font-size: 1.5rem;
+      }
+
+      .section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header class="header-title">
-  <h1>Agglomération de Longueuil, je me souviens</h1>
-  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-</header>
+
+
+<header class="dates-header">
+    <div class="dates-background">
+      <span class="date floating" style="--x: 10%; --y: 50%; --duration: 20s; color: #F2B123;">1900</span>
+      <span class="date floating" style="--x: 40%; --y: 60%; --duration: 25s; color: #F2B123">1950</span>
+      <span class="date floating" style="--x: 70%; --y: 30%; --duration: 18s; color: #487999;">1970</span>
+      <span class="date floating" style="--x: 20%; --y: 70%; --duration: 22s; color: #487999;">1980</span>
+      <span class="date floating" style="--x: 60%; --y: 60%; --duration: 30s; color: #F2797E;">1990</span>
+      <span class="date floating" style="--x: 80%; --y: 10%; --duration: 30s; color: #F2797E;">2000</span>
+      <span class="date floating" style="--x: 50%; --y: 10%; --duration: 30s; color: #62BAAB;">2010</span>
+      <span class="date floating" style="--x: 10%; --y: 10%; --duration: 30s; color: #62BAAB;">2020</span>
+      <span class="date floating" style="--x: 80%; --y: 80%; --duration: 30s; color: #BB7928;">Présent</span>
+      
+      
+    </div>
+    <div class="text-center">
+      <h1>Agglomération de Longueuil, Je me souviens</h1>
+      <p>Une exposition itinérante sur l'immigration dans l'Agglomération de Longueuil</p>
+    </div>
+  </header>
 
 <nav class="navbar">
   <div class="logo">
-    <img src="images/logo.png" alt="Logo" />
+    <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Logo" />
   </div>
   <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
     <span class="bar"></span>
@@ -28,58 +99,62 @@
     <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
     <li><a href="/ligneDuTemps">Ligne du temps</a></li>
     <li><a href="/echosDuPasse">Échos du passé</a></li>
-    <li><a href="/profileParVille">Immigration par ville​</a></li>
+    <li><a href="/profileParVille">Profil par ville​​</a></li>
     <li><a href="/histoireIci">Histoires d'Ici</a></li> 
     <li><a href="/entreprisesImmigrantes" class="active">Dans l'Agglo​</a></li>
+    <li><a href="/bibliographie">Bibliographie</a></li>
+    
+    
     
   </ul>
 </nav>
 
 <!-- Carrousel -->
+  <div class="section">
+    <h1 style="color: #EF6C2D; text-align: center;">Dans l'Agglo</h1>
+    <p>
+        Explorez la carte interactive de l'agglomération de Longueuil mettant en valeur 
+
+        diverses entreprises locales de personnes issues de l'immigration.
+    </p>
+  </div>
 <section class="main-carousel">
-  <h2 style="text-align: center">Dans l'Agglo</h2>
+ 
     <div id="map"></div>
 
     <div class="legend" id="legend">
-        <strong>Légende :</strong><br>
-        <div><span class="legend-color" style="background-color: black;"></span> Beauté</div>
-        <div><span class="legend-color" style="background-color: green;"></span> Nourriture</div>
-        <div><span class="legend-color" style="background-color: orange;"></span> Autre</div>
-    </div>
+        
+        
+      </div>
 </section>
+<div style="margin: 2rem ;" class="Legende1">
+<strong>Légende :</strong><br>
+        <div><span class="legend-color" style="background-color: #5FBBAC;"></span> Services professionnels, scientifiques et techniques</div>
+        <div><span class="legend-color" style="background-color: #C0AD31;"></span> Commerce de détail</div>
+        <div><span class="legend-color" style="background-color: #F2797E;"></span> Soins personnels et services de beauté</div>
+        <div><span class="legend-color" style="background-color: #2CAC4C;"></span> Santé et services sociaux</div>
+        <div><span class="legend-color" style="background-color: orange;"></span> Services d’hébergement et de restauration</div>
+        <div><span class="legend-color" style="background-color: #965A7A;"></span> Services</div>
+</div>
 
     <!-- Miniatures en dessous -->
     
  
-  <section class="presentation">
-    <div class="container">
-      <h2>Petit descriptif du but/histoire de l'expo​</h2>
-      <p>
-        Cette exposition itinérante est un projet de la MIRS 
-        visant à mettre en valeur l'histoire des personnes immigrantes 
-        dans la Rive-Sud de Montréal entre le 20e et 21e siècle.  
-        En faisant voyager l'exposition dans les différentes villes de 
-        l'agglomération de Longueuil, nous espérons renforcer les liens 
-        entre les communautés et promouvoir la compréhension mutuelle.​
-      </p>
-      <h2>Remerciements:​</h2>
-      <p>
-        ...........................................​
-        .............................................
-        ..............................................
-        ...............................................
-      </p>
-    </div>
-  </section>
   
   
 
-<footer class="footer">
+  <footer class="footer">
     <div class="container">
       <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
-      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+      <button id="back-to-top" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>
+
+  <script>
+    const script = document.createElement('script');
+    script.src = 'mon-script.js?v=' + new Date().getTime(); // Timestamp pour éviter le cache
+    document.head.appendChild(script);
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -107,28 +182,41 @@
   </script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-      var map = L.map('map').setView([45.5234, -73.5217], 12); // Coordonnées générales de Longueuil
+      var map = L.map('map').setView([45.498, -73.5], 12); // Coordonnées générales de Longueuil
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap contributors'
       }).addTo(map);
 
       var locations = [
-          { name: "Épicerie Africaine de la Rive Sud", address: "265 Boulevard Sainte-Foy, Longueuil, QC J4J 1X1", lat: 45.5312, lon: -73.5208, color: "green" },
-          { name: "Salon d’esthétique Harshi’s", address: "3025 Ch. de Chambly, Longueuil, QC J4L 1N3", lat: 45.5269, lon: -73.5048, color: "black" },
-          { name: "Alma Latina Marché", address: "2114 Ch. de Chambly, Longueuil, QC J4J 3Y7", lat: 45.5345, lon: -73.5082, color: "green" },
-          { name: "Salon Black Beauty", address: "5240 Montée Saint-Hubert, Saint-Hubert, QC J3Y 1V7", lat: 45.4985, lon: -73.4235, color: "black" },
-          { name: "Cake Bakery Bro Tequeños & Empanadas", address: "3220 Rue Saint-Hubert, Saint-Hubert, QC J3Y 8Y5", lat: 45.5001, lon: -73.4005, color: "green"},
-          { name: "Angelo P.C. Chen", address: "5740 Rue Arthur, Brossard, QC J4Z 1E2", lat: 45.4798, lon: -73.4675, color: "orange"}           
-      ];
+        
+  { name: "Épicerie Africaine de la Rive Sud", address: "265 Boulevard Sainte-Foy, Longueuil, QC J4J 1X1", lat: 45.5313, lon: -73.5209, color: "#C0AD31" },
+  { name: "Salon d’esthétique Harshi’s", address: "3025 Ch. de Chambly, Longueuil, QC J4L 1N3", lat: 45.5272, lon: -73.5049, color: "#F37C80" },
+  { name: "Alma Latina Marché", address: "2114 Ch. de Chambly, Longueuil, QC J4J 3Y7", lat: 45.5347, lon: -73.5085, color: "orange" },
+  { name: "Salon Black Beauty", address: "5240 Montée Saint-Hubert, Saint-Hubert, QC J3Y 1V7", lat: 45.4988, lon: -73.4233, color: "#F37C80" },
+  { name: "Cake Bakery Bro Tequeños & Empanadas", address: "3220 Rue Saint-Hubert, Saint-Hubert, QC J3Y 8Y5", lat: 45.5003, lon: -73.4008, color: "green" },
+  { name: "ADH Multi Services Inc", address: "359 Rue Saint-Charles O, Longueuil, QC J4H 1E7", lat: 45.5309, lon: -73.5159, color: "#5FBBAC" }, 
+  { name: "Clinique Dentaire Hoa", address: "101 boul. Roland-Therrien, Suite 130, Longueuil, QC, J4H 4B9", lat: 45.5415, lon: -73.4969, color: "#2CAC4C" },
+  { name: "Chez Cesar", address: "3477 Mnt Saint-Hubert, Saint-Hubert, QC J3Y 4J6", lat: 45.4973, lon: -73.4041, color: "orange" },
+  { name: "JeeJan", address: "5759 Av. Auteuil, Brossard, QC J4Z 1M6", lat: 45.4769, lon: -73.4576, color: "orange" },
+  { name: "Angelo P.C. Chen", address: "5740 Rue Arthur, Brossard, Quebec, Canada", lat: 45.4668, lon: -73.4657, color: "orange" },
+  { name: "Salon Choucri", address: "3250 Boul. De Rome Suite 7, Brossard, J4Y 1V9", lat: 45.4584, lon: -73.4751, color: "#F37C80" },
+  { name: "Distinction Patrimoine", address: "4605 Boul Lapinière Bureau 350, Brossard, J4Z 3T5", lat: 45.4735, lon: -73.4474, color: "orange" },
+  { name: "Courtier immobilier, résidentiel et commercial", address: "7503 Boul Taschereau, Brossard", lat: 45.4754, lon: -73.4589, color: "#5FBBAC" },
+  { name: "Le Sunset Kitchen", address: "rue holmes, saint-hubert, J4t 1R3", lat: 45.4836, lon: -73.4330, color: "orange" },
+  { name: "Les Studios MP", address: "1765 Boulevard Taschereau, Longueuil, J4K 2X9", lat: 45.5207, lon: -73.5023, color: "#965A7A" },
+  { name: "Angelo P.C. Chen", address: "5740 Rue Arthur, Brossard, Quebec, Canada", lat: 45.4586, lon: -73.4729, color: "#965A7A" }
+
+       
+          ];
 
       function addMarker(location) {
           var customIcon = L.divIcon({
               className: 'custom-icon',
               html: `<div style="background-color: ${location.color}; 
-                      border-radius: 50%; width: 30px; height: 30px; 
-                      text-align: center; line-height: 30px; color: white; 
-                      font-weight: bold;">${location.name[0]}</div>`, 
+                      border-radius: 50%; width: 20px; height: 20px; 
+                      text-align: center; line-height: 20px; color: white; 
+                      font-weight: bold; font-family:'Barlow'">${location.name[0]}</div>`, 
               iconSize: [30, 30],
               iconAnchor: [15, 15]
           });

@@ -1,59 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
+ * {
+      box-sizing: border-box;
+    }
 
-  header {
-    background-color: #283593;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+    body {
+      font-family: 'Barlow', sans-serif;
+      margin: 0;
+     
+      background-color: #F2F0ED;
+    }
+    .header {
+      background-color: #F37C80;
+      color: #F2F0ED;
+      text-align: center;
+      padding: 2rem 2rem;
+      border-radius: 0 0 1rem 1rem;
+     
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  .accordion-container {
-    margin: 20px 0;
-  }
-  
-  .accordion-btn {
-    background-color: #e8eaf6;
-    color: #1a237e;
-    cursor: pointer;
-    padding: 15px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s ease;
-  }
-  
-  .accordion-btn:hover {
-    background-color: #c5cae9;
-  }
-  
-  .accordion-content {
-    display: none;
-    padding: 10px 15px;
-    background-color: #f0f0f0;
-    border-left: 3px solid #3f51b5;
-  }
-  
-  .accordion-item + .accordion-item {
-    margin-top: 10px;
-  }
-  
-  .arrow {
-    transition: transform 0.3s ease;
-  }
-  
-  /* Rotation quand actif */
-  .accordion-btn.active .arrow {
-    transform: rotate(90deg);
-  }
-  
+    .toggle-block {
+      background-color: #F2F0ED;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .toggle-button {
+      background-color: #C0AC2C;
+      color: #F2F0ED;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      transition: background-color 0.3s;
+      font-family: 'Barlow';
+    }
+
+    .toggle-button:hover {
+      background-color: #A19025;
+    }
+
+    .paragraph-section {
+      margin-top: 16px;
+      padding: 14px;
+      background-color: #F2F0ED;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      display: none;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .paragraph-section p {
+          margin-top: 1rem;
+          font-family: 'Barlow';
+      }
+
+    @media (max-width: 480px) {
+      .toggle-button {
+        font-size: 14px;
+        padding: 10px 14px;
+      }
+
+      .paragraph-section {
+        font-size: 15px;
+      }
+    }
+
+    .arrow{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #F2F0ED;
+      }
+      .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #F2F0ED;
+      }

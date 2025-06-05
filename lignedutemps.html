@@ -3,106 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agglomération de Longueuil, je me souviens</title>
- 
+
   <link rel="stylesheet" href="styleLignedutemps.css">
   <link rel="stylesheet" href="style.css">
-  <!-- Lien vers FontAwesome pour les icônes -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
+  <title>Agglomération de Longueuil, Je me souviens</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
 </head>
 <body>
-    <header class="header-title">
-        <h1>Agglomération de Longueuil, je me souviens</h1>
-        <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-      </header>
-      
-      <nav class="navbar">
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </div>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
-          <li><a href="/ligneDuTemps" class="active">Ligne du temps</a></li>
-          <li><a href="/echosDuPasse">Échos du passé</a></li>
-          <li><a href="/profileParVille">Immigration par ville​</a></li>
-          <li><a href="/histoireIci">Histoires d'Ici</a></li> 
-          <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>          
-          
-        </ul>
-      </nav>
-  <header class="header2">
-    <h1>Histoire de l’immigration à Longueuil</h1>
-    <p>L’évolution de l’immigration dans l’agglomération de Longueuil 
-        s’inscrit dans un contexte plus large de transformations démographiques 
-        observées à Montréal et au Canada. La manière dont les données statistiques 
-        ont été collectés et regroupées au fil des décennies influence la compréhension 
-        des dynamiques migratoires locales. Pendant longtemps, 
-        les statistiques démographiques de Longueuil étaient souvent regroupées avec celles de 
-        Montréal au sein de la Région Métropolitaine de Montréal, rendant l’analyse spécifique de 
-        son immigration plus complexe. C’est pourquoi cette section examine les tendances migratoires 
-        non seulement à Longueuil, mais aussi à Montréal, au Québec et à l’échelle du Canada, afin d’offrir un contexte plus approfondi à votre lecture.
-    </p>
-    
-  
-        <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
-            <h1 style="text-align: center; font-family: 'Bad Script'; font-weight: bold;">Immiggration par communauté:</h1>
-          
-            <section class="customer-logos slider">
-                <div class="slide img-fluid">Immigration Française</div>
-                <div class="slide img-fluid">Immigration Haitienne</div>
-                <div class="slide img-fluid">Immigration Maghrébine</div>
-                <div class="slide img-fluid">Immiggration Camérounaise</div>
-                <div class="slide img-fluid">Immigration chinoise</div>
-               
-            </section>
-          </div>
-    
-        
+
+<header class="dates-header">
+    <div class="dates-background">
+      <span class="date floating" style="--x: 10%; --y: 50%; --duration: 20s; color: #F2B123;">1900</span>
+      <span class="date floating" style="--x: 40%; --y: 60%; --duration: 25s; color: #F2B123">1950</span>
+      <span class="date floating" style="--x: 70%; --y: 30%; --duration: 18s; color: #487999;">1970</span>
+      <span class="date floating" style="--x: 20%; --y: 70%; --duration: 22s; color: #487999;">1980</span>
+      <span class="date floating" style="--x: 60%; --y: 60%; --duration: 30s; color: #F2797E;">1990</span>
+      <span class="date floating" style="--x: 80%; --y: 10%; --duration: 30s; color: #F2797E;">2000</span>
+      <span class="date floating" style="--x: 50%; --y: 10%; --duration: 30s; color: #62BAAB;">2010</span>
+      <span class="date floating" style="--x: 10%; --y: 10%; --duration: 30s; color: #62BAAB;">2020</span>
+      <span class="date floating" style="--x: 80%; --y: 80%; --duration: 30s; color: #BB7928;">Présent</span>
       
       
+    </div>
+    <div class="text-center">
+      <h1>Agglomération de Longueuil, Je me souviens</h1>
+      <p>Une exposition itinérante sur l'immigration dans l'Agglomération de Longueuil</p>
+    </div>
   </header>
 
-  
-  <main>
-    <section class="section">
-      <div class="content">
-        <h2>Le Contexte Historique</h2>
-        <p>
-          L’immigration à Longueuil a suivi une trajectoire marquée par des événements mondiaux et une évolution démographique constante. Depuis les premières vagues de peuplement, la ville a vu ses habitants se diversifier au fil des siècles, au rythme des changements politiques et économiques, aussi bien au Québec qu’au Canada.
-        </p>
-        <p>
-          Le processus de collecte des données démographiques a souvent brouillé les pistes, car Longueuil était souvent incluse dans les statistiques générales de Montréal. Ce n'est que récemment que la ville a vu émerger une identité propre, marquée par une présence croissante de communautés culturelles diversifiées.
-        </p>
-      </div>
-      <img src="images/histoireLongueil.jpg" alt="Photo historique de Longueuil">
-    </section>
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Logo" />
+  </div>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
+    <li><a href="/ligneDuTemps" class="active">Ligne du temps</a></li>
+    <li><a href="/echosDuPasse">Échos du passé</a></li>
+    <li><a href="/profileParVille">Profil par ville​​</a></li>
+    <li><a href="/histoireIci">Histoires d'Ici</a></li> 
+    <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
+    <li><a href="/bibliographie">Bibliographie</a></li>
+    
+    
+    
+  </ul>
+</nav>
 
-    <section class="section">
-      <div class="content">
-        <h2>L’immigration Récente</h2>
-        <p>
-          Depuis les années 90, l'immigration à Longueuil est devenue un moteur essentiel de la croissance de la population. Ce phénomène s'est intensifié dans les années 2000, alors que le Québec a vu un solde migratoire positif qui a contribué à transformer profondément la structure démographique de la région.
-        </p>
-        <p>
-          En 2023, Longueuil est une ville riche de multiples cultures, avec des quartiers vibrants comme Saint-Hubert et Greenfield Park, où l’immigration joue un rôle clé dans la dynamique sociale et économique. Ce flux migratoire reflète non seulement l’attractivité de la ville mais aussi la quête de nouvelles opportunités pour ses nouveaux habitants.
-        </p>
-      </div>
-      <img src="images/immigration2.jpg" alt="Image d'immigrants à Longueuil">
-    </section>
-  </main>
-  <footer class="footer">
+
+    <!-- Miniatures en dessous -->
+    
+  </section>
+   <div id="texteLigne">
+  <section style="padding: 2rem; background-color: #965A7A; font-family: 'Barlow', sans-serif;">
+   <div class="listen-toggle">
+  
+  <label for="toggleAudio" class="listen-button">
+    <button id="listenButton" onclick="lireTexteLigne()" class="listen-button">
+    <span id="listenIcon">🎧</span> 
+    
+    </button>
+
+    
+  </label>
+ </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: auto; gap: 2rem;">
+    
+    <!-- Texte à gauche -->
+    <div style="flex: 1 1 400px; line-height: 1.7;" >
+      <h1 style="color: #F2F0ED; font-size: 2rem; margin-bottom: 1rem; margin-top: 4rem;">Histoire de l’immigration à Longueuil</h1>
+      <p style="font-size: 1.1rem; line-height: 1.8; color: #F2F0ED; text-align: justify; border-left: 2px solid #F2F0ED; padding-left: 1rem;">
+        L’évolution de l’immigration dans l’agglomération de Longueuil s’inscrit dans un contexte plus large de transformations démographiques observées à Montréal et au Canada.
+        La manière dont les données statistiques ont été collectées et regroupées au fil des décennies influence la compréhension des dynamiques migratoires locales.
+        Pendant longtemps, certaines statistiques démographiques de Longueuil étaient regroupées avec celles de Montréal au sein de la Région Métropolitaine de Montréal, rendant l’analyse spécifique de son immigration plus complexe. 
+        C’est pourquoi cette section examine les tendances migratoires non seulement à Longueuil,
+        mais aussi à Montréal, au Québec et à l’échelle du Canada, afin d’offrir un contexte plus approfondi à votre lecture.
+      </p>
+    </div>
+
+    <!-- Image à droite -->
+    <div style="flex: 1 1 300px; text-align: center;">
+      <img src="images/imgLigneDduTemps.png" alt="Immigration à Longueuil" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+  </div>
+   <a href="/immigrationParCommunaute" class="cta-button" style="margin-right: 1.3rem;">
+    Cliquez ici<span class="arrow">→</span>
+  </a><span class="cta-span">Pour en savoir plus sur l’immigration par groupe ethnoculturel dans l’agglomération de Longueuil.</span>
+</section>
+ <section style="padding: 2rem; background-color: #F2F0ED; font-family: 'Barlow', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; max-width: 1200px; margin: auto; gap: 2rem;">
+    
+    <!-- Texte à gauche -->
+    <div style="flex: 1 1 400px;">
+      <h1 style="color: #965A7A; font-size: 2rem; margin-bottom: 1rem; margin-top: 4rem;">Immigration dans l’Agglomération de Longueuil</h1>
+      <p style="font-size: 1.1rem; line-height: 1.8; color: #965A7A; text-align: justify; border-left: 2px solid #F2F0ED; line-height: 1.7;">
+        Au fil des années, l’immigration a joué un rôle croissant dans la croissance démographique du Québec. 
+        Alors qu’en 1998, l’accroissement naturel (différence entre les naissances et les décès) 
+        surpassait l’apport migratoire (+21 600 contre +2 500 personnes), cette tendance s’est inversée. 
+        En 2023, le Québec a enregistré un solde migratoire de 193 000 personnes, principalement 
+        en raison des migrations internationales et interprovinciales, tandis que l’accroissement 
+        naturel se limitait à seulement 400 personnes.
+        Depuis le début des années 2000, l’agglomération de Longueuil a vu sa population 
+        immigrante se diversifier de manière significative. En 2001, les immigrants représentaient 12
+         % de la population locale, un chiffre qui a grimpé à 20,3 % en 2016 et continue de croître. 
+         Entre 1996 et 2005, 17 024 nouveaux arrivants se sont installés sur le territoire, 
+         principalement dans la catégorie de l’immigration économique (57,3 %), 
+         suivis du regroupement familial (24 %) et des réfugiés (18,4 %). 
+         En 2021, les immigrants représentaient 22,7 % de la population de l’agglomération, 
+         soit plus d’un habitant sur cinq. 
+      </p>
+    </div>
+   
+     </div>
+    <!-- Image à droite -->
+    <div style="flex: 2 2 300px; text-align: center;">
+      <img src="images/slides/expo_agglo_longueuil_ligne du temps.jpg" alt="Immigration à Longueuil" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      
+    </div>
+    
+  </div>
+   
+</section>
+</div>
+
+
+<footer class="footer">
     <div class="container">
       <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
-      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+      <button id="back-to-top" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>
+  <script>
+  let lectureEnCoursLigne = false;
+  let syntheseLigne = window.speechSynthesis;
+  let utteranceLigne;
+
+  function lireTexteLigne() {
+    const texteLingne = document.getElementById("texteLigne").innerText;
+    const icone = document.getElementById("listenIcon");
+
+    if (!lectureEnCoursLigne) {
+      utteranceLigne = new SpeechSynthesisUtterance(texteLingne);
+      utteranceLigne.lang = 'fr-FR';
+
+      syntheseLigne.speak(utteranceLigne);
+      lectureEnCoursLigne = true;
+      icone.textContent = "⏹️"; // Icône pour arrêter
+
+      utteranceLigne.onend = () => {
+        lectureEnCoursLigne = false;
+        icone.textContent = "🎧"; // Retour à l’icône écoute
+      };
+    } else {
+      syntheseLigne.cancel();
+      lectureEnCoursLigne = false;
+      icone.textContent = "🎧";
+    }
+  }
+  </script>
+  <script>
+    const script = document.createElement('script');
+    script.src = 'mon-script.js?v=' + new Date().getTime(); // Timestamp pour éviter le cache
+    document.head.appendChild(script);
+  </script>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -172,12 +250,6 @@
         }]
     });
 });
-  </script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-  <script src="Swiper.js"></script>
-
+ </script> 
 </body>
 </html>

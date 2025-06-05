@@ -1,0 +1,31 @@
+ body {
+      font-family: 'Barlow', sans-serif;
+     
+      
+      background-color: #F2F0ED;
+      color: #333;
+    }
+    .bibliographie {
+      text-align: center;
+      color: #965A7A;
+      margin: 2rem;
+    }
+    ol {
+      padding-left: 2rem;
+    }
+    li {
+      margin: 3rem;
+
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 600px) {
+      .minim {
+        margin: 1rem;
+      }
+    }

@@ -2,68 +2,66 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Fond animé varié</title>
+  <title>Bouton avec flèche pour masquer/afficher</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
     }
 
-    .shape {
-      position: absolute;
-      opacity: 0.15;
-      z-index: 0;
-      animation: float linear infinite;
+    .toggle-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s;
     }
 
-    .circle {
-      border-radius: 50%;
-      background-color: #38bdf8;
+    .toggle-button:hover {
+      background-color: #0056b3;
     }
 
-    .square {
-      background-color: #facc15;
-    }
-
-    .rectangle {
-      background-color: #a78bfa;
-    }
-
-    .semi-circle {
-      background-color: #34d399;
-      border-radius: 100px 100px 0 0;
-      transform: rotate(0deg);
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(100vh) translateX(0) rotate(0deg);
-      }
-      100% {
-        transform: translateY(-200px) translateX(50px) rotate(360deg);
-      }
+    .paragraph {
+      margin-top: 15px;
+      padding: 12px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      display: none; /* masqué par défaut */
     }
   </style>
 </head>
 <body>
 
-  <!-- Cercles -->
-  <div class="shape circle" style="width: 80px; height: 80px; left: 5%; animation-duration: 26s;"></div>
-  <div class="shape circle" style="width: 50px; height: 50px; left: 35%; animation-duration: 18s;"></div>
+  <button class="toggle-button" onclick="toggleParagraph(this)">
+    <span class="arrow">⬇️</span> Afficher le texte
+  </button>
 
-  <!-- Carrés -->
-  <div class="shape square" style="width: 60px; height: 60px; left: 20%; animation-duration: 30s;"></div>
-  <div class="shape square" style="width: 100px; height: 100px; left: 80%; animation-duration: 24s;"></div>
+  <div class="paragraph" id="textBlock">
+    Ceci est un paragraphe qui peut être affiché ou masqué en cliquant sur le bouton ci-dessus.
+  </div>
 
-  <!-- Rectangles -->
-  <div class="shape rectangle" style="width: 40px; height: 120px; left: 15%; animation-duration: 22s;"></div>
-  <div class="shape rectangle" style="width: 60px; height: 160px; left: 50%; animation-duration: 35s;"></div>
+  <script>
+    function toggleParagraph(button) {
+      const paragraph = document.getElementById("textBlock");
+      const arrow = button.querySelector(".arrow");
 
-  <!-- Demi-cercles -->
-  <div class="shape semi-circle" style="width: 100px; height: 50px; left: 70%; animation-duration: 28s;"></div>
-  <div class="shape semi-circle" style="width: 120px; height: 60px; left: 45%; animation-duration: 32s;"></div>
+      if (paragraph.style.display === "none" || paragraph.style.display === "") {
+        paragraph.style.display = "block";
+        button.innerHTML = '<span class="arrow">⬆️</span> Masquer le texte';
+      } else {
+        paragraph.style.display = "none";
+        button.innerHTML = '<span class="arrow">⬇️</span> Afficher le texte';
+      }
+    }
+  </script>
 
 </body>
 </html>

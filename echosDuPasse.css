@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: 'Barlow', sans-serif;
     
+    
    
     
 
@@ -26,8 +27,13 @@ body {
   columns: 4 250px;
   column-gap: 1rem;
   padding: 1rem;
+  
 }
-
+.backgrnd {
+  background-image: url('images/MIRSGraphicElements.svg');
+  background-repeat: no-repeat;
+  
+}
 .gallery img {
   width: 100%;
   margin-bottom: 1rem;

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture paragraphes avec icône</title>
+  <style>
+    .paragrapheLigne {
+      margin-bottom: 15px;
+    }
+    .listenIcon {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="paragrapheLigne">
+    Voici le premier paragraphe à lire à haute voix.
+    <span class="listenIcon" onclick="lireParagraphe(this)">🎧</span>
+  </div>
+  <div class="paragrapheLigne">
+    Voici le second paragraphe, différent du premier.
+    <span class="listenIcon" onclick="lireParagraphe(this)">🎧</span>
+  </div>
+  <div class="paragrapheLigne">
+    Et un dernier exemple pour tester le lecteur vocal.
+    <span class="listenIcon" onclick="lireParagraphe(this)">🎧</span>
+  </div>
+
+  <script>
+    let synthese = window.speechSynthesis;
+    let utterance;
+    let iconeActive = null;
+
+    function lireParagraphe(icone) {
+      // Si on clique sur l’icône déjà en lecture
+      if (icone === iconeActive) {
+        synthese.cancel();
+        icone.textContent = "🎧";
+        iconeActive = null;
+        return;
+      }
+
+      // Sinon, on arrête toute lecture précédente
+      if (iconeActive) {
+        iconeActive.textContent = "🎧";
+        synthese.cancel();
+      }
+
+      const texte = icone.parentElement.innerText.replace("🎧", "").replace("⏹️", "").trim();
+      utterance = new SpeechSynthesisUtterance(texte);
+      utterance.lang = "fr-FR";
+
+      // Quand la lecture se termine, remettre l’icône à 🎧
+      utterance.onend = () => {
+        icone.textContent = "🎧";
+        iconeActive = null;
+      };
+
+      icone.textContent = "⏹️";
+      iconeActive = icone;
+      synthese.speak(utterance);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,162 +1,199 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
+  <title>Agglomération de Longueuil, Je me souviens</title>
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
-  <title>Agglomération de Longueuil, je me souviens</title>
-  <style>
-    
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-    }
-
-    .accordion-btn {
-      background-color: #e8eaf6;
-      color: #1a237e;
-      cursor: pointer;
-      padding: 15px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid #c5cae9;
-    }
-
-    .arrow {
-      transition: transform 0.3s ease;
-      font-size: 18px;
-    }
-
-    .accordion-btn.active .arrow {
-      transform: rotate(90deg);
-    }
-
-    .accordion-content {
-      padding: 0 15px 15px 40px;
-      display: none;
-      background-color: #fff;
-      border-bottom: 1px solid #c5cae9;
-    }
-
-    
-  </style>
+  <link rel="stylesheet" href="profileParVille.css">
 </head>
 <body>
-    <header class="header-title">
-        <h1>Agglomération de Longueuil, je me souviens</h1>
-        <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-      </header>
+
+<header class="dates-header">
+    <div class="dates-background">
+      <span class="date floating" style="--x: 10%; --y: 50%; --duration: 20s; color: #F2B123;">1900</span>
+      <span class="date floating" style="--x: 40%; --y: 60%; --duration: 25s; color: #F2B123">1950</span>
+      <span class="date floating" style="--x: 70%; --y: 30%; --duration: 18s; color: #487999;">1970</span>
+      <span class="date floating" style="--x: 20%; --y: 70%; --duration: 22s; color: #487999;">1980</span>
+      <span class="date floating" style="--x: 60%; --y: 60%; --duration: 30s; color: #F2797E;">1990</span>
+      <span class="date floating" style="--x: 80%; --y: 10%; --duration: 30s; color: #F2797E;">2000</span>
+      <span class="date floating" style="--x: 50%; --y: 10%; --duration: 30s; color: #62BAAB;">2010</span>
+      <span class="date floating" style="--x: 10%; --y: 10%; --duration: 30s; color: #62BAAB;">2020</span>
+      <span class="date floating" style="--x: 80%; --y: 80%; --duration: 30s; color: #BB7928;">Présent</span>
       
-      <nav class="navbar">
-        <div class="logo">
-          <img src="images/logo.png" alt="Logo" />
-        </div>
-        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
-          <li><a href="/ligneDuTemps">Ligne du temps</a></li>
-          <li><a href="/echosDuPasse">Échos du passé</a></li>
-          <li><a href="/profileParVille" class="active">Immigration par ville​</a></li>
-          <li><a href="/histoireIci">Histoires d'Ici</a></li> 
-          <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
-          
-          
-        </ul>
-      </nav> 
-  <header style="text-align: center;">
-    <h1>Profil par Ville – Agglomération de Longueuil</h1>
+      
+    </div>
+    <div class="text-center">
+      <h1>Agglomération de Longueuil, Je me souviens</h1>
+      <p>Une exposition itinérante sur l'immigration dans l'Agglomération de Longueuil</p>
+    </div>
   </header>
 
-  <div class="container">
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Logo" />
+  </div>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
+    <li><a href="/ligneDuTemps">Ligne du temps</a></li>
+    <li><a href="/echosDuPasse">Échos du passé</a></li>
+    <li><a href="/profileParVille" class="active">Profil par ville​</a></li>
+    <li><a href="/histoireIci">Histoires d'Ici</a></li> 
+    <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
+    <li><a href="/bibliographie">Bibliographie</a></li>
+    
+    
+    
+  </ul>
+</nav>
+<div class="container">
+    <header class="header">
+    <h1>Profil par Ville</h1>
+  </header>
+<!-- Carrousel -->
+  
 
-    <!-- Ville 1 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Longueuil et Vieux-Longueuil
-    </button>
-    <div class="accordion-content">
-      <p>Longueuil est une ville où de nombreux immigrants choisissent de s’installer. Selon le recensement de 2021, c’est dans Longueuil et particulièrement dans le Vieux-Longueuil que l’on retrouve la plus forte proportion d’immigrants récents au sein de l’agglomération. Le Vieux-Longueuil accueille ainsi 22,8 % de ces nouveaux arrivants, tandis que Longueuil dans son ensemble en compte 19,0 %.</p>
-      <p>Les immigrants qui s’y établissent viennent principalement d’Afrique (38,7 % à Vieux-Longueuil, 34,1 % à Longueuil), suivis de l’Europe (env. 20 %) et de l’Asie (15,7 % à Vieux-Longueuil, 18,6 % à Longueuil).</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Longueuil et Arrondissement Vieux-Longueuil </span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Longueuil est une ville où de nombreux immigrants choisissent de s’installer. 
+          Selon le recensement canadien de 2021, c’est dans Longueuil et particulièrement dans le Vieux-Longueuil que l’on retrouve la plus forte proportion d’immigrants récents au sein de l’agglomération. Le Vieux-Longueuil accueille ainsi 22,8 % de ces nouveaux arrivants, tandis que Longueuil dans son ensemble en compte 19,0 %.</p>
+        <p>Les immigrants qui s’y établissent viennent principalement d’Afrique, 
+          représentant 38,7 % de la population immigrante du Vieux-Longueuil et 34,1 % de celle de Longueuil. L’Europe suit avec environ 20 % dans les deux secteurs, tout comme l’Asie, qui représente 15,7 % des immigrants du Vieux-Longueuil et 18,6 % de ceux de Longueuil. Cette diversité contribue à enrichir la ville et à renforcer son dynamisme culturel.</p>
+        
+      </div>
     </div>
 
-    <!-- Ville 2 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Hubert
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Hubert se distingue par sa grande diversité ethnique. Les principales communautés immigrantes viennent d’Haïti, du Maroc et de France. En 2021, 21,6 % de la population (19 710 personnes) est issue de l’immigration.</p>
-      <p>Les origines principales sont : Afrique (30 %), Asie (21,5 %), Europe (19,8 %). La croissance entre 2016 et 2021 est de 43,1 % — la plus forte de l’agglomération.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Saint-Hubert</span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Saint-Hubert se distingue par sa grande diversité ethnique. D’après le Portrait social de la table de concertation du développement social de Saint-Hubert (DSSH) de 2016, les principales communautés immigrantes de Saint-Hubert viennent d’Haïti, du Maroc et de France.</p>
+        <p>En 2021, selon le recensement canadien le plus récent, 21,6 % de la population de Saint-Hubert est issue de l’immigration, soit 19 710 personnes. Les immigrants proviennent majoritairement d’Afrique (30 %), suivis de l’Asie (21,5 %) et de l’Europe (19,8 %). Saint-Hubert se démarque aussi par le plus grand nombre d’immigrants originaires des Antilles et des Bermudes dans l’agglomération de Longueuil, avec 12,5 %.</p>
+        <p>Entre 2016 et 2021, la population immigrante de Saint-Hubert a connu une forte croissance, augmentant de 43,1 %, soit la plus importante hausse de l’agglomération. Cette évolution témoigne du rôle central de Saint-Hubert dans l’accueil des nouveaux arrivants et de son dynamisme multiculturel.</p>
+      </div>
     </div>
 
-    <!-- Ville 3 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Greenfield Park
-    </button>
-    <div class="accordion-content">
-      <p>Greenfield Park compte 25,4 % d’immigrants en 2021 et la plus forte proportion de réfugiés de l’agglomération. Les pays d’origine : Algérie, Afghanistan, Chine, Colombie, Roumanie.</p>
-      <p>Les régions : Europe (29,8 %), Asie (25 %), Afrique (22,2 %). Cette diversité enrichit fortement son caractère culturel.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Greenfield Park </span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Greenfield Park se distingue par sa grande diversité culturelle. En 2021, près d’un quart de la population immigrante de l’agglomération y habitait (25,4 %), et c’est aussi dans ce secteur que l’on retrouve la plus forte proportion de personnes réfugiées de l’agglomération de Longueuil.</p>
+        <p>D’après le recensement de 2016, les principaux pays d’origine des immigrants de Greenfield Park étaient l’Algérie, 
+          l’Afghanistan, la Chine, la Colombie et la Roumanie. En 2021, les trois grandes régions de provenance restent l’Europe (29,8 %), l’Asie (25 %) et l’Afrique (22,2 %). Cette diversité contribue à la richesse culturelle de Greenfield Park et à son caractère accueillant pour les nouveaux arrivants.</p>
+        
+      </div>
     </div>
 
-    <!-- Ville 4 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Brossard
-    </button>
-    <div class="accordion-content">
-      <p>Ville historiquement marquée par l’immigration, Brossard a en 2021 la plus grande proportion d’immigrants : 40,8 %. Cependant, elle attire peu de nouveaux immigrants (14 %).</p>
-      <p>Origines : Asie (50,1 %), Afrique (18,6 %), Europe (15,4 %), Amérique latine (10,1 %). Pays notables : Chine, Vietnam, Inde, Maroc, France, Colombie, etc.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Brossard</span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Brossard, située dans l’agglomération de Longueuil, se distingue par 
+          une présence immigrante très ancienne. Depuis ses débuts, la ville a attiré un grand nombre de personnes issues de l’immigration. En 2021, Brossard demeure la municipalité de l’agglomération affichant la plus forte proportion de personnes immigrantes, regroupant 40,8 % de l’ensemble de la population immigrante locale. Cependant, elle accueille une proportion relativement faible de l'immigration récente, avec seulement 14 % en 2021, ce qui en fait l’un des taux les plus bas de la région.</p>
+        <p>La moitié de la population immigrante de Brossard provient d'Asie (50,1 %). L’Afrique arrive en deuxième position (18,6 %), suivie de l’Europe (15,4 %) et de l’Amérique centrale et du Sud (10,1 %).
+           Parmi les pays d’origine, la Chine est le plus représenté, mais on y trouve aussi des immigrants du Vietnam, de Hong Kong, de l'Inde, de l’Afghanistan, de l’Iran, du Maroc, de l’Égypte, de la Roumanie, de la France, de la Colombie et d’Haïti, parmi d’autres. </p>
+        <p>Cette diversité témoigne de l’histoire de Brossard 
+          en tant que destination d’accueil pour de nombreux immigrants venus des quatre coins du monde. </p>
+      </div>
     </div>
 
-    <!-- Ville 5 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Lambert
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Lambert accueille 16,2 % de la population immigrante de l’agglomération et 17,8 % de l’immigration récente. Notable : 31,4 % des immigrants sont des aînés.</p>
-      <p>Origines : Europe (35,6 %), Asie (21,6 %), Amérique latine (17,4 %). Pays : France, Roumanie, Algérie, Chine, Iran, Colombie.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Saint-Lambert</span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Saint-Lambert se distingue par une présence immigrante de plus en plus marquée au sein de l’agglomération de Longueuil. Selon les données 
+          du recensement, la ville accueille 16,2 % de la population immigrante de l’agglomération.</p>
+        <p>En matière d’immigration récente, elle se classe juste après la ville de Longueuil et l’arrondissement du Vieux-Longueuil, avec un taux de 17,8 %. Une particularité 
+          notable est la proportion élevée d’aînés parmi les immigrants : plus de trois sur dix (31,4 %). </p>
+        <p>Les origines des immigrants à Saint-Lambert reflètent une grande diversité. L’Europe arrive en tête (35,6 %), suivie de l’Asie (21,6 %) et de l’Amérique centrale et du Sud (17,4 %). Parmi les pays les plus représentés figurent la France, la Roumanie, 
+          l’Algérie, la Chine, l’Iran et la Colombie, témoignant du caractère cosmopolite de la ville. </p>
+      </div>
+
+      
+
     </div>
 
-    <!-- Ville 6 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Saint-Bruno
-    </button>
-    <div class="accordion-content">
-      <p>Saint-Bruno a une population immigrante modeste (10,3 %) avec peu d’immigrants récents (14,4 %), mais une forte proportion d’immigration économique.</p>
-      <p>Origines : Europe (50,6 %), Asie (14,4 %), Amérique latine (14,2 %). Sa tendance européenne est marquée comparée aux autres villes.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Saint-Bruno</span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>Saint-Bruno, bien que plus modeste en termes de population immigrante, reste une ville marquée par une diversité croissante, avec 10,3 % de la population immigrante de l’agglomération de Longueuil. Les immigrants récents représentent également une proportion plus faible dans cette ville, soit 14,4 %. 
+          Saint-Bruno se distingue par la plus grande part de personnes issues de l’immigration économique</p>
+        <p>En ce qui concerne les origines des immigrants, la moitié d'entre eux provient d’Europe (50,6 %), suivie de l’Asie (14,4 %) et de l’Amérique centrale et du Sud (14,2 %). La proportion d’immigrants européens à Saint-Bruno est nettement plus élevée que 
+          dans d'autres secteurs de l’agglomération, mettant en lumière une tendance unique dans cette ville</p>
+        
+      </div>  
+
     </div>
 
-    <!-- Ville 7 -->
-    <button class="accordion-btn">
-      <span class="arrow">&#9654;</span>
-      Boucherville
-    </button>
-    <div class="accordion-content">
-      <p>Avec seulement 9,4 % d’immigrants en 2021, Boucherville est la ville la moins immigrée de l’agglomération. Pourtant, 15,1 % des immigrants sont récents.</p>
-      <p>Origines : Europe (34,4 %), Afrique (19,9 %), Amérique latine (19,3 %), Asie (17,7 %). Pays : France, Colombie, Chine, Maroc, Haïti, Vietnam.</p>
+    <div class="toggle-block">
+      <button class="toggle-button" onclick="toggleSection(this)">
+        <span class="title">Boucherville</span>
+        <span class="arrow">⬇</span>
+      </button>
+      <div class="paragraph-section">
+        <p>En 2021, Boucherville affiche la plus faible proportion d'immigrants dans l’agglomération de Longueuil, avec seulement 9,4 % de la population immigrante locale. 
+          Cependant, elle accueille 15,1 % des immigrants récents, un chiffre notable pour cette ville</p>
+        <p>En 2016, les principaux pays d’origine des immigrants à Boucherville étaient 
+          la France, la Colombie, le Pérou, Haïti, le Maroc, l’Algérie, la Chine, 
+          le Liban et le Vietnam. En 2021, les régions de provenance restent similaires, 
+          avec l’Europe en tête (34,4 %), suivie de l’Afrique (19,9 %), de l’Amérique centrale et du Sud (19,3 %) et de l’Asie (17,7 %). </p>
+        
+        <p>Bien que la proportion d’immigrants soit modeste, Boucherville se distingue par la deuxième plus forte croissance de sa population immigrante, avec un taux de 28,9 %. Cette dynamique en fait une ville 
+          qui se développe rapidement grâce à l’arrivée de nouveaux arrivants. </p>
+      
+        </div>  
+
     </div>
 
   </div>
 
-  <footer class="footer">
+  <script>
+    function toggleSection(button) {
+      const section = button.nextElementSibling;
+      const arrow = button.querySelector('.arrow');
+      const isVisible = section.style.display === 'block';
+
+      section.style.display = isVisible ? 'none' : 'block';
+      arrow.textContent = isVisible ? '⬇' : '⬆';
+    }
+  </script>
+
+  <script>
+    const script = document.createElement('script');
+    script.src = 'mon-script.js?v=' + new Date().getTime(); // Timestamp pour éviter le cache
+    document.head.appendChild(script);
+  </script>
+
+
+<footer class="footer">
     <div class="container">
       <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
-      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+      <button id="back-to-top" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>
 
@@ -184,31 +221,10 @@
       });
     });
   </script>
-   
+    
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 <script src="Swiper.js"></script>
-
-  <script>
-    const buttons = document.querySelectorAll('.accordion-btn');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        btn.classList.toggle('active');
-
-        // Ferme les autres
-        buttons.forEach(b => {
-          if (b !== btn) {
-            b.classList.remove('active');
-            b.nextElementSibling.style.display = 'none';
-          }
-        });
-
-        content.style.display = btn.classList.contains('active') ? 'block' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>

@@ -3,20 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agglomération de Longueuil, je me souviens</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
+  <title>Agglomération de Longueuil, Je me souviens</title>
+  
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header-title">
-  <h1>Agglomération de Longueuil, je me souviens</h1>
-  <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil​</p>
-</header>
+<header class="dates-header">
+    <div class="dates-background">
+      <span class="date floating" style="--x: 10%; --y: 50%; --duration: 20s; color: #F2B123;">1900</span>
+      <span class="date floating" style="--x: 40%; --y: 60%; --duration: 25s; color: #F2B123">1950</span>
+      <span class="date floating" style="--x: 70%; --y: 30%; --duration: 18s; color: #487999;">1970</span>
+      <span class="date floating" style="--x: 20%; --y: 70%; --duration: 22s; color: #487999;">1980</span>
+      <span class="date floating" style="--x: 60%; --y: 60%; --duration: 30s; color: #F2797E;">1990</span>
+      <span class="date floating" style="--x: 80%; --y: 10%; --duration: 30s; color: #F2797E;">2000</span>
+      <span class="date floating" style="--x: 50%; --y: 10%; --duration: 30s; color: #62BAAB;">2010</span>
+      <span class="date floating" style="--x: 10%; --y: 10%; --duration: 30s; color: #62BAAB;">2020</span>
+      <span class="date floating" style="--x: 80%; --y: 80%; --duration: 30s; color: #BB7928;">Présent</span>
+      
+      
+    </div>
+    <div class="text-center">
+      <h1>Agglomération de Longueuil, Je me souviens</h1>
+      <p>Une exposition itinérante sur l'immigration dans l'Agglomération de Longueuil</p>
+    </div>
+  </header>
 
 <nav class="navbar">
   <div class="logo">
-    <img src="images/Longueil Je me souviens logo.svg" alt="Logo" />
+    <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Logo" />
   </div>
   <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
     <span class="bar"></span>
@@ -27,128 +46,176 @@
     <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
     <li><a href="/ligneDuTemps">Ligne du temps</a></li>
     <li><a href="/echosDuPasse">Échos du passé</a></li>
-    <li><a href="/profileParVille">Immigration par ville​</a></li>
+    <li><a href="/profileParVille">Profil par ville​​</a></li>
     <li><a href="/histoireIci" class="active">Histoires d'Ici</a></li> 
     <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
+    <li><a href="/bibliographie">Bibliographie</a></li>
+   
     
     
   </ul>
 </nav>
 
+
+
 <!-- Carrousel -->
 
 <section class="video-gallery presentation">
   <div class="container">    
-    <h2>Histoire d'Ici</h2>
-    <p style="margin-bottom: 50px;">Décoyuvrez les expériences de personnes issues de l'Immigration
+    <h2>Histoires d'Ici</h2>
+    <p style="margin-bottom: 50px;">Découvrez les expériences de personnes issues de l'Immigration
       à travers l'Agglomération de Longueuil.
     </p>
   </div>
     <div class="video-container">
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/6GvzTqda__Q" 
+        <iframe src="https://www.youtube.com/embed/57zsvUjyD5A?rel=0" 
                 title="Vidéo 1" 
-                allowfullscreen></iframe>
+                allowfullscreen>
+        </iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4> Nadjine Auguste – Haïti</h4>
+    </div>
+        
       </div>
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/K0BxB49dPkc" 
+        <iframe src="https://www.youtube.com/embed/ozgZrobE0gk?rel=0" 
                 title="Vidéo 2" 
                 allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4> Véronique Veroux - Tahiti</h4>
       </div>
+      </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" 
+        <iframe src="https://www.youtube.com/embed/tI0PZUlwZgQ?rel=0" 
                 title="Vidéo 3" 
                 allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4> Maggie Alvear/ Alberto Riveros Donoso – Chili</h4>
       </div>
+      </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" 
-                title="Vidéo 3" 
+        <iframe src="https://www.youtube.com/embed/-BLxgu9rQdw?rel=0" 
+                title="Vidéo 4" 
                 allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Teddy Leo Luxama– Haïti </h4>
       </div>
+      </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" 
-                title="Vidéo 3" 
+        <iframe src="https://www.youtube.com/embed/oyPTQoDeUvQ?rel=0" 
+                title="Vidéo 5" 
                 allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Diane Alexander – Îles des Caraïbes </h4>
       </div>
+      </div>
+
       <div class="video">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" 
-                title="Vidéo 3" 
+        <iframe src="https://www.youtube.com/embed/baWmzCgy9cM?rel=0" 
+                title="Vidéo 6" 
                 allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Francisco Cuenca / Cecilia Coral – Colombie</h4>
       </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/5EdwxH5GZP8?rel=0" 
+                title="Vidéo 7" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Fabiola Nganta - Cameroun</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/afMhe7arbg4?rel=0" 
+                title="Vidéo 8" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Edison Mariqueo – Chili</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Pjih2Hfavhk?rel=0" 
+                title="Vidéo 9" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Angelo Pochien Chen - Taiwan</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/e05wEFbDsMo?rel=0" 
+                title="Vidéo 10" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Malakeh Tehrani – Jordanie</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/e05wEFbDsMo?rel=0" 
+                title="Vidéo 10" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Malakeh Tehrani – Jordanie</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/pRoRq2WJ05Y?rel=0" 
+                title="Vidéo 11" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Banu Rezaie – Afghanistan</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/yLWq-l89U8s?rel=0" 
+                title="Vidéo 12" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Saeideh Erfan  / Nastaran Shariati – Iran</h4>
+      </div>
+      </div>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/M6rccFmxvcw?rel=0" 
+                title="Vidéo 12" 
+                allowfullscreen></iframe>
+        <div class="descriptionH" style="margin-top: 2rem;">
+      <h4>Lydia Sheng – Chine</h4>
+      </div>
+      </div>
+     
     </div>
   </section>
   
     <!-- Miniatures en dessous -->
     
 
-  <section class="presentation">
-    <div class="container">
-      <h2>Agglomération de Longueuil, Je Me Souviens​</h2>
-      <p>
-        Agglomération de Longueuil, Je Me Souviens est une exposition itinérante qui retrace 
-        l’histoire de l’immigration dans l’agglomération de Longueuil. À travers des témoignages, 
-        des artéfacts et des récits inspirants, elle met en valeur la richesse de la diversité ethnoculturelle locale.
-         La communauté immigrante y occupe une place centrale, racontant son parcours, ses défis et ses contributions à 
-         la vie collective. La Maison Internationale de la Rive-Sud vous invite à découvrir un patrimoine vivant, façonné 
-         par des cultures et des histoires venues d’ailleurs.
-      </p>
-      </p>
-      <h2>Remerciements:​</h2>
-      <p>
-        La Maison Internationale de la Rive-Sud tient à remercier tous les contributeurs clés qui 
-        ont rendu possible la réalisation de ce projet. Un merci tout particulier à la Ville de Longueuil 
-        pour sa contribution financière, grâce à laquelle cette exposition a pu voir le jour. 
-        Nous remercions également les étudiants, Marie Pascal, Alice Perron-Savard, 
-        Jean-Jacques Fenolo, Sara Zeini Hassanvand, Mariana Jiménez, Ekaterina Yakovleff du programme de maîtrise 
-        en muséologie à l’UQAM qui ont participé à la recherche ayant servi de fondation à ce travail de mémoire. 
-        Enfin, un immense merci aux membres de la communauté de l’agglomération qui ont généreusement partagé leurs témoignages, 
-        artéfacts et archives. Sans votre précieuse collaboration, cette exposition n’aurait pas pu prendre vie.
-      </p>
-    </div>
-  </section>
   
-  <section class="dates-avenir">
-  <div class="container">
-    <h2>Dates à venir</h2>
-    <ul>
-      <li class="fade-in">
-        <span class="icon">📅</span>
-        <div class="event-info">
-          <strong>1er mai 2025 :</strong> Lancement de notre nouvelle plateforme en ligne<br>
-          <span class="details">📍 Montréal | 🕒 10h00</span>
-        </div>
-      </li>
-      <li class="fade-in">
-        <span class="icon">📅</span>
-        <div class="event-info">
-          <strong>15 juin 2025 :</strong> Atelier de formation pour nos partenaires<br>
-          <span class="details">📍 Québec | 🕒 14h00</span>
-        </div>
-      </li>
-      <li class="fade-in">
-        <span class="icon">📅</span>
-        <div class="event-info">
-          <strong>30 août 2025 :</strong> Journée portes ouvertes<br>
-          <span class="details">📍 Laval | 🕒 9h30</span>
-        </div>
-      </li>
-      <li class="fade-in">
-        <span class="icon">📅</span>
-        <div class="event-info">
-          <strong>12 septembre 2025 :</strong> Webinaire gratuit sur la cybersécurité<br>
-          <span class="details">📍 En ligne | 🕒 18h00</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
 
 <footer class="footer">
     <div class="container">
       <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
-      <button id="back-to-top" aria-label="Revenir en haut">⬆️</button>
+      <button id="back-to-top" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>
+
+  <script>
+    const script = document.createElement('script');
+    script.src = 'mon-script.js?v=' + new Date().getTime(); // Timestamp pour éviter le cache
+    document.head.appendChild(script);
+  </script>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {

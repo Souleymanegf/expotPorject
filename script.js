@@ -112,3 +112,30 @@ window.addEventListener('load', handleScroll);
 
 
 
+
+ let lectureEnCours = false;
+  let synthese = window.speechSynthesis;
+  let utterance;
+
+  function lireTexte() {
+    const texte = document.getElementById("texte").innerText;
+    const icone = document.getElementById("listenIcon");
+
+    if (!lectureEnCours) {
+      utterance = new SpeechSynthesisUtterance(texte);
+      utterance.lang = 'fr-FR';
+
+      synthese.speak(utterance);
+      lectureEnCours = true;
+      icone.textContent = "⏹️"; // Icône pour arrêter
+
+      utterance.onend = () => {
+        lectureEnCours = false;
+        icone.textContent = "🎧"; // Retour à l’icône écoute
+      };
+    } else {
+      synthese.cancel();
+      lectureEnCours = false;
+      icone.textContent = "🎧";
+    }
+  }

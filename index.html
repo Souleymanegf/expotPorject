@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bad+Script&display=swap" rel="stylesheet">
-  <title>Agglomération de Longueuil, je me souviens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Agglomération de Longueuil, Je me souviens</title>
   
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -28,8 +30,8 @@
       
     </div>
     <div class="text-center">
-      <h1>Agglomération de Longueuil, Je Me Souviens</h1>
-      <p>Une exposition itinérante sur l'immgration dans l'Agglomération de Longueuil</p>
+      <h1>Agglomération de Longueuil, Je me souviens</h1>
+      <p>Une exposition itinérante sur l'immigration dans l'Agglomération de Longueuil</p>
     </div>
   </header>
 
@@ -46,11 +48,11 @@
     <li><a href="https://expojemesouviens.ca/" class="active">Accueil</a></li>
     <li><a href="/ligneDuTemps">Ligne du temps</a></li>
     <li><a href="/echosDuPasse">Échos du passé</a></li>
-    <li><a href="/profileParVille">Immigration par ville​</a></li>
+    <li><a href="/profileParVille">Profil par ville​</a></li>
     <li><a href="/histoireIci">Histoires d'Ici</a></li> 
     <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
-    <li><a href="#">Bibliographie</a></li>
-    <li><a href="">Politique de confidentialité</a></li>
+    <li><a href="/bibliographie">Bibliographie</a></li>
+   
     
     
   </ul>
@@ -64,42 +66,45 @@
         <img src="images/slides/expo_agglo_longueuil_ligne du temps.jpg" alt="Image 1">
         <div class="slide-content">
           <h2>Ligne du temps</h2>
-          <p>Petite description</p>
-          <button><a href="/lignedutemps">En savoir plus... </a></button>
+          <p>Découvrez l’histoire de l’immigration de divers groupes à Longueuil.</p>
+          <button><a href="/ligneDuTemps">En savoir plus... </a></button>
         </div>
       </div>
       <div class="swiper-slide">
-        <img src="images/slides/expo_agglo_longueuil_echos_du_passé.jpg" alt="Image 1">
+        <img src="images/slides/expo_agglo_longueuil_echos_du_passe.jpg" alt="Image 2">
         <div class="slide-content">
-          <h2>Echos du passé</h2>
-          <p>Petite description</p>
-          <button><a href="/lignedutemps">En savoir plus... </a></button>
+          <h2>Échos du passé</h2>
+          <p>Explorez notre galerie d’archives photos. </p>
+          <button><a href="/echosDuPasse">En savoir plus... </a></button>
         </div>
       </div>
+
       <div class="swiper-slide">
-        <img src="images/slides/expo_agglo_longueuil_Vie Quotidienne.jpg" alt="Image 2">
+        <img src="images/slides/expo_agglo_longueuil_Vie Quotidienne.jpg" alt="Image 3">
         <div class="slide-content">
-          <h2>Vie Quotidienne​</h2>
-          <p>Petite description</p>
+          <h2>Profil par ville</h2>
+          <p>Apprenez-en plus sur le profil de l’immigration dans votre ville de l’agglomération de Longueuil. </p>
           <button><a href="/profileParVille">En savoir plus... </a></button>
         </div>
       </div>
       <div class="swiper-slide">
-        <img src="images/slides/expo_agglo_longueuil_temoignages.jpg" alt="Image 3">
+        <img src="images/slides/expo_agglo_longueuil_temoignages.jpg" alt="Image 4">
         <div class="slide-content">
-          <h2>Témoignages</h2>
-          <p>La satisfaction client est notre priorité.</p>
+          <h2>Histoires d’ici </h2>
+          <p>Découvrez les expériences de personnes issues de l'Immigration à travers l'Agglomération de Longueuil. </p>
           <button><a href="/histoireIci">En savoir plus... </a></button>
         </div>
       </div>
+
       <div class="swiper-slide">
-        <img src="images/slides/expo_agglo_longueuil_contribution_eco.jpg" alt="Image 4">
+        <img src="images/slides/expo_agglo_longueuil_Contribution.jpg" alt="Image 4">
         <div class="slide-content">
-          <h2>Contributions économiques, politiques et sociales​​</h2>
-          <p>Engagement durable et impact concret.</p>
+          <h2>Dans l'Agglo</h2>
+          <p>Une carte interactive d’entreprises de personnes issues de l’immigration à travers l’agglomération de Longueuil.</p>
           <button><a href="/entreprisesImmigrantes">En savoir plus... </a></button>
         </div>
       </div>
+      
     </div>
 
     <!-- Pagination et navigation -->
@@ -113,36 +118,73 @@
     
   </section>
   
-  <section class="remerciement">
+  <section class="remerciement" >
+    <div class="listen-toggle">
+  
+  <label for="toggleAudio" class="listen-button">
+    <button id="listenButton" onclick="lireTexte()" class="listen-button">
+    <span id="listenIcon">🎧</span> 
+    
+    </button>
+    
+  </label>
+</div>
+<div id="texte">
     <div class="column left-column">
       <!-- Remplace le chemin par le tien -->
       <img src="images/LOGO_Expo_LongueuilJeMeSouviens.svg" alt="Titre de l'exposition" class="title-image" />
-      <p>
-        Agglomération de Longueuil, Je Me Souviens est une exposition itinérante qui retrace l’histoire de l’immigration dans l’agglomération de Longueuil. À travers des témoignages, des artéfacts et des récits inspirants, elle met en valeur la richesse de la diversité ethnoculturelle locale. La communauté immigrante y occupe une place centrale, racontant son parcours, ses défis et ses contributions à la vie collective. La Maison Internationale de la Rive-Sud vous invite à découvrir un patrimoine vivant, façonné par des cultures et des histoires venues d’ailleurs.
+      <h2 style="margin-bottom: 1.2rem;">Une histoire collective tissée d’ailleurs et d’ici.</h2>
+       <p style="font-weight: bold;">AGGLOMÉRATION DE LONGUEUIL, JE ME SOUVIENS 
+      </p>
+      <p style="margin-bottom: 1.2rem;">
+        Une exposition itinérante qui raconte l’histoire inspirante de l’immigration dans l’agglomération de Longueuil. 
+
+      </p>
+      <p style="margin-bottom: 1.2rem;">À travers des témoignages touchants, des artefacts uniques et des récits inspirants, cette exposition met en lumière la richesse de la diversité ethnoculturelle locale. La communauté immigrante y occupe une place centrale en racontant son parcours, ses défis et ses précieuses contributions à la vie collective. 
+ 
+</p>
+        
+      <p style="margin-bottom: 1.2rem;">
+         <span style="font-weight: bold;">La Maison Internationale de la Rive-Sud</span>  vous invite à découvrir un patrimoine vivant, façonné par des cultures venues d’ailleurs et ancré dans notre mémoire commune. 
+
+ 
+
       </p>
     </div>
     <div class="column right-column">
       <h1>Remerciements</h1>
-      <p>
-        La Maison internationale de la Rive-Sud tient à exprimer sa profonde gratitude à tous les contributeurs clés qui ont rendu ce projet possible. 
-      </p>
-        Un merci tout particulier à la Ville de Longueuil pour son soutien financier, sans lequel cette exposition n’aurait pu voir le jour. 
-      <p>
+      
+       <p style="margin-bottom: 1.2rem;">
+        La Maison Internationale de la Rive-Sud tient à exprimer sa profonde gratitude à tous les partenaires clés qui ont rendu ce projet possible. 
+
+       </p>
+      
+        
+      <p style="margin-bottom: 1.2rem;">
+        Merci à <span style="font-weight: bold;">l’Agglomération de Longueuil</span>, au <span style="font-weight: bold;">Ministère de l’Immigration, de la Francisation et de l’Intégration (MIFI)</span> pour leur soutien essentiel à la réalisation de cette exposition. 
 
       </p>
-      Nous remercions également les étudiants du programme de maîtrise en muséologie de l’UQAM – Marie Pascal, Alice Perron-Savard, Jean-Jacques Fenolo, Sara Zeini Hassanvand, Mariana Jiménez et Ekaterina Yakovleff – ainsi que leurs professeurs Léa Le Calvé et Yves Bergeron, dont les recherches ont constitué les fondations de cette exposition. 
-      <p>
-        Enfin, un immense merci aux membres de la communauté de l’agglomération et nos collègues de la Maison Internationale de la Rive-Sud qui ont généreusement partagé leurs témoignages, artéfacts et archives. Votre précieuse collaboration a donné vie à cette exposition. 
+      <p style="margin-bottom: 1.2rem;">
+        Nous remercions également les étudiant·e·s à la maîtrise en muséologie de l’Université du Québec à Montréal (UQAM), dont les recherches ont posé les fondations de ce projet, ainsi que leurs professeur·e·s pour leur encadrement généreux. 
+      
+      </p>
+      <p style="margin-bottom: 1.2rem;">
+         
+Enfin, un immense merci à tous les participants et à nos collègues, qui ont généreusement partagé leurs témoignages, artéfacts et archives.
 
+      </p>
+        
+      <p style="font-weight: bold;">
+        Il faut toute une communauté pour bâtir un projet porteur de mémoire, de dialogue et de solidarité. Cette exposition en est la preuve vivante. 
       </p>
     </div>
-    
+    </div> 
   </section>
   <footer style="background-color:white; padding:2rem 1rem; text-align:center;">
     
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; align-items:center; margin-top:1rem;">
       
-      <img src="images/LOGO_PartFinanciere_Quebec.jpg" alt="Partenaire financière" style="height:100px;">
+      
       <img src="images/logo-ville-longueuil.jpg" alt="Ville de Longueuil" style="height:100px;">
       <img src="images/Logo-MIRS.jpeg" alt="MIRS" style="height:100px;">
       <!-- Ajoute d'autres logos ici -->
@@ -157,21 +199,21 @@
     <h3 style="text-align: center; margin-bottom: 3rem;">📍 Centre socioculturel Alphonse-Lepage au 7905, avenue San Francisco, Brossard </h3>
     <ul>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Jeudi, 5 juin 2025 </strong> 
           <span class="details">🕒 17h00 - 19h00 </span>
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Samedi, 7 juin 2025</strong> 
           <span class="details">🕒 10h00 - 16h00 </span>
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+       <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Mardi, 10 juin 2025</strong> 
           <span class="details">🕒 11h00 - 15h00 </span>
@@ -179,7 +221,7 @@
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Jeudi, 12 juin 2025</strong> 
           <span class="details">🕒 11h00 - 15h00 </span>
@@ -187,14 +229,14 @@
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Samedi, 14 juin 2025</strong> 
           <span class="details">🕒 10h00 - 16h00 </span>
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Mardi, 17 juin 2025</strong> 
           <span class="details">🕒 11h00 - 15h00 </span>
@@ -202,7 +244,7 @@
         </div>
       </li>
       <li class="fade-in">
-        <span class="icon">📅</span>
+        <span class="icon"><i class="fas fa-calendar-alt" style="color: #965A7A;"></i></span>
         <div class="event-info">
           <strong>Jeudi, 19 juin 2025</strong> 
           <span class="details">🕒 11h00 - 15h00 </span>
@@ -213,12 +255,23 @@
   </div>
 </section>
 
+
+  
 <footer class="footer">
     <div class="container">
       <p>© 2025 Maison Internationale de la Rive-Sud. Tous droits réservés.</p>
       <button id="back-to-top" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>
+
+  <script>
+    function chargerScript() {
+      const script = document.createElement('script');
+      script.src = 'script.js?v=' + new Date().getTime(); // Ajoute un timestamp pour éviter le cache
+      document.head.appendChild(script);
+    }
+  </script>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -244,6 +297,7 @@
       });
     });
   </script>
+
     
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
