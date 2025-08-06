@@ -115,7 +115,7 @@
   }
   
   .logo img {
-    height: 100px;
+    height: 60px;
     width: auto;
   }
   
@@ -123,14 +123,14 @@
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 13px;
   }
   
   .nav-links li a {
     position: relative;
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 17px;
     padding: 8px 12px;
     border-radius: 8px;
     transition: color 0.3s ease;
@@ -203,7 +203,7 @@
   }
   
   /* Responsive */
-  @media (max-width: 2000px) {
+  @media (max-width: 768px) {
     .menu-toggle {
       display: flex;
     }
@@ -212,6 +212,7 @@
       position: absolute;
       top: 72px;
       right: 24px;
+      gap: 18px;
       flex-direction: column;
       background: white;
       padding: 16px;
@@ -721,4 +722,39 @@ cta-button {
       font-size: 1rem;
       color: #333;
       font-family: 'Barlow';
+    }
+
+
+    .form-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .responsive-iframe {
+      position: relative;
+      width: 100%;
+      padding-bottom: 125%; /* Ratio 4:5 (modifiable selon votre besoin) */
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .responsive-iframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
