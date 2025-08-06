@@ -3,65 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <title>Bouton avec flèche pour masquer/afficher</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f9f9f9;
-    }
+.footer2 {
+  background: linear-gradient(135deg, #965A7A, #B56D93);
+  color: #f1f1f1;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .toggle-button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s;
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
 
-    .toggle-button:hover {
-      background-color: #0056b3;
-    }
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
 
-    .paragraph {
-      margin-top: 15px;
-      padding: 12px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      display: none; /* masqué par défaut */
-    }
-  </style>
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-col h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #EF6C2D;
+  display: block;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #EF6C2D;
+}
+
+.footer-col p {
+  margin: 6px 0;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  background: #EF6C2D;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #EF6C2D;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+</style>
+  
 </head>
 <body>
+    <footer class="footer2">
+  <div class="footer-container">
+    <!-- Section Navigation -->
+    <div class="footer-col">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="https://expojemesouviens.ca/">Accueil</a></li>
+        <li><a href="/ligneDuTemps">Ligne du temps</a></li>
+        <li><a href="/echosDuPasse">Échos du passé</a></li>
+        <li><a href="/profileParVille">Profil par ville​</a></li>
+        <li><a href="/histoireIci">Histoires d'Ici</a></li> 
+        <li><a href="/entreprisesImmigrantes">Dans l'Agglo​</a></li>
+        <li><a href="#">Activités​</a></li>
+        <li><a href="/bibliographie">Bibliographie</a></li>
+      </ul>
+    </div>
 
-  <button class="toggle-button" onclick="toggleParagraph(this)">
-    <span class="arrow">⬇️</span> Afficher le texte
-  </button>
+    <!-- Section Contact -->
+    <div class="footer-col">
+      <h3>Nous joindre</h3>
+      <p><strong>Maison Internationale de la Rive-Sud</strong></p>
+      <p>2500 Boul. Lapinière, Brossard, Québec J4Z 3V1</p>
+      <p>Tél. :  (450) 445-8777</p>
+      <p>Courriel : info@mirs.qc.ca</p>
 
-  <div class="paragraph" id="textBlock">
-    Ceci est un paragraphe qui peut être affiché ou masqué en cliquant sur le bouton ci-dessus.
+      <div class="social-icons">
+        <a href="https://www.facebook.com/Maisoninternationaledelarivesud/"><i class="fab fa-facebook-f"></i></a>
+        
+        <a href="https://www.linkedin.com/company/maisoninternationaledelarivesud/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/la.mirs/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCbprOZamSmJZgC75P_5Cx_g"><i class="fab fa-youtube"></i></a>
+        
+      </div>
+    </div>
   </div>
 
-  <script>
-    function toggleParagraph(button) {
-      const paragraph = document.getElementById("textBlock");
-      const arrow = button.querySelector(".arrow");
+  
+</footer>
 
-      if (paragraph.style.display === "none" || paragraph.style.display === "") {
-        paragraph.style.display = "block";
-        button.innerHTML = '<span class="arrow">⬆️</span> Masquer le texte';
-      } else {
-        paragraph.style.display = "none";
-        button.innerHTML = '<span class="arrow">⬇️</span> Afficher le texte';
-      }
-    }
-  </script>
+    
 
 </body>
 </html>
